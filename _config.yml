@@ -1,0 +1,16 @@
+server:      true
+auto:        true
+server_port: 4000
+
+markdown: rdiscount
+rdiscount:
+  extensions: [smart, footnotes]
+
+pygments:  false
+permalink: /:categories/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
