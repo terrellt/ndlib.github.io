@@ -1,0 +1,54 @@
+---
+layout:    boilerplate
+presenter: post
+---
+
+<section class="main" role="main" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="masthead">
+    {% if page.tagline %}
+    <hgroup>
+      <h1 class="headline instapaper_ignore">{{ page.title }}</h1> <span class="hidden">&mdash;</span>
+      <h2 class="tagline">{{ page.tagline }}</h2>
+    </hgroup>
+    {% else %}
+    <h1 itemprop="headline" class="headline instapaper_ignore">{{ page.title }}</h1>
+    {% endif %}
+    <p class="subtle">
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <a itemprop="url" href="http://dan.brubakerhorst.com/"><span itemprop="name">Dan Brubaker Horst</span></a>
+    </span> &mdash;
+    {% if page.revised %}
+    <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>, revised on <time datetime="{{ page.revised | date:"%Y-%m-%d %H:%M" }}" itemprop="dateRevised">{{ page.revised | date:"%B %e, %Y" }}</time>
+    {% else %}
+    <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>
+    {% endif %}
+    </p>
+  </header>
+
+  <article itemprop="articleBody" class="instapaper_body">
+
+{{ content }}
+  </article>
+
+</section>
+
+<footer class="page-footer">
+  <section class="content">
+    <p>
+      Please direct any comments or questions to <a href="https://www.twitter.com/danhorst">@danhorst</a>.
+    </p>
+    {% if page.filename %}
+    <p>
+      The content of this page is <a href="https://github.com/ndlib/ndlib.github.io/blob/master/_posts/{{ page.filename }}">available on github</a>.
+    </p>
+
+    <p>
+      Edits and <a href="http://help.github.com/send-pull-requests/">pull requests</a> are welcome.
+    </p>
+    {% endif %}
+  </section>
+  <nav class="navigation">
+    <a href="/">Home</a>
+  </nav>
+</footer>
