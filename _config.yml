@@ -5,7 +5,7 @@ analytics_token: 'UA-XXXXXXXX-X'
 
 markdown: rdiscount
 rdiscount:
-  extensions: [smart, footnotes]
+  extensions: [smart]
 
 pygments:  false
 permalink: /:categories/:title/
