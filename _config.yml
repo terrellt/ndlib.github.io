@@ -16,6 +16,10 @@ exclude:
   - LICENSE
   - README.md
 
+sorted_categories:
+  - planning
+  - practices
+
 authors:
 # - id:             github_username
 #   google_plus_id: https://plus.google.com/THIS_PART_HERE/posts
