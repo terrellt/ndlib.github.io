@@ -1,8 +1,10 @@
 ---
-layout:   post
+author:   danhorst
 category: planning
-author:   Dan Brubaker Horst
-title:    Building A Digital Repository We Can Live With
+filename: 2013-01-03-a-serviceable-digital-repository.md
+layout:   post
+tagline:  Building A Digital Repository We Can Live With
+title:    A Serviceable IDR
 ---
 
 ## Setting Expectations

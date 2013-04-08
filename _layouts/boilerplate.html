@@ -11,9 +11,13 @@
   {% if page.description %}
     <meta name="description" content="{{ page.description }}">
   {% endif %}
-  {% if page.author %}
-    <meta name="author" content="{{ page.author }}">
-  {% endif %}
+{% if page.author %}
+  {% for author in site.authors %}
+    {% if author.id == page.author %}
+    <meta name="author" content="{{ author.name }}">
+    {% endif %}
+  {% endfor %}
+{% endif %}
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/site.css" />
 

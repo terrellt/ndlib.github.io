@@ -15,3 +15,18 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+
+authors:
+# - id:             github_username
+#   google_plus_id: https://plus.google.com/THIS_PART_HERE/posts
+#   name:           Your Full Name
+#   twitter:        twitter_username_without_@
+#   url:            http://url-to-representation-of-person.com
+  - id:             danhorst
+    google_plus_id: 112599365298738218884
+    name:           Dan Brubaker Horst
+    twitter:        danhorst
+    url:            http://dan.brubakerhorst.com/
+  - id:             jeremyf
+    name:           Jeremy Friesen
+    twitter:        jeremyfriesen
