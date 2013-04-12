@@ -22,16 +22,14 @@ With a bit more digging, I discovered that the current user wasn't getting set.
 Ultimately I wrote an automated test to start testing against.
 Below is the initially failing test that I wrote:
 
-```
-  describe ApplicationController do
-    let(:user) { FactoryGirl.create(:user) }
-    it 'should set :current_user on signin' do
-      expect {
-        sign_in(user)
-      }.to change(controller, :current_user).from(nil).to(user)
+    describe ApplicationController do
+      let(:user) { FactoryGirl.create(:user) }
+      it 'should set :current_user on signin' do
+        expect {
+          sign_in(user)
+        }.to change(controller, :current_user).from(nil).to(user)
+      end
     end
-  end
-```
 
 All told, I spent about 6 hours troubleshooting this.
 Had I not spent the week dealing with load dependencies of an Engine that uses an Engine, I think I may have stumbled upon the solution much earlier.
@@ -45,29 +43,26 @@ And this is where I grabbed [my new favorite gem: method_locator](http://rubygem
 
 To my gem's Gemfile I added the following:
 
-```
-  gem 'method_locator'
-```
+    gem 'method_locator'
 
 Then in my debugger console, I could do the following to get where all the method was defined:
 
-```
-(rb:1)$ e methods_for(:sign_in).collect{|m| m.source_location.join(':') }
-=> ["/path/to/gems/ruby-2.0.0-p0@curate/gems/devise-2.2.3/lib/devise/test_helpers.rb:45"]
-```
 
-*If :sign_in was overridden in a descendant class, the above array would've had two or more entries.*
-*One for each definition.*
-*Which is the long way of saying, I could see where `super` was being used.*
+    (rb:1)$ e methods_for(:sign_in).collect{|m| m.source_location.join(':') }
+    => ["/path/to/gems/ruby-2.0.0-p0@curate/gems/devise-2.2.3/lib/devise/test_helpers.rb:45"]
+
+* If :sign_in was overridden in a descendant class, the above array would've had two or more entries.*
+* One for each definition.*
+* Which is the long way of saying, I could see where `super` was being used.*
 
 Now with the path to the method I could:
 
 * open the file in my editor
 * add a runtime break point (as below)
 
-```
-(rb:1)$ break /path/to/gems/ruby-2.0.0-p0@curate/gems/devise-2.2.3/lib/devise/test_helpers.rb:45
-```
+Example:
+
+    (rb:1)$ break /path/to/gems/ruby-2.0.0-p0@curate/gems/devise-2.2.3/lib/devise/test_helpers.rb:45
 
 From there I could debug away, stepping into the bowels of Warden and Devise.
 And what did I learn?
@@ -76,19 +71,19 @@ Second, in attempting to take a shortcut, I had in fact created a whole lot of w
 
 Below is the class that proved to problematic, and it was written by me earlier this week.
 
-```
-class User < ActiveRecord::Base
-  include Sufia::User
-  devise :recoverable, :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
 
-  def password; 'password'; end
+    class User < ActiveRecord::Base
+      include Sufia::User
+      devise :recoverable, :database_authenticatable, :registerable,
+        :recoverable, :rememberable, :trackable, :validatable
 
-  def encrypted_password
-    password_digest(password)
-  end
-end
-```
+      def password; 'password'; end
+
+      def encrypted_password
+        password_digest(password)
+      end
+    end
+
 *Hint: From the debugger, I could do `User.new.encrypted_password` multiple times, and get different answers.*
 
 To be fair, the class was in my dummy application, and I just wanted the bare metal to get it working.
