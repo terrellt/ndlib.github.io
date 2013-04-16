@@ -1,11 +1,12 @@
 ---
-author:   danhorst
-category: practices
-filename: 2013-04-16-make-git-forget-things.md
-layout:   post
-tagline:  Sometimes you want git to ignore changes not files
-tags:     git
-title:    Make git look the other way
+author:      danhorst
+category:    practices
+description: There are some things that you don't want to commit to source control.
+filename:    2013-04-16-make-git-forget-things.md
+layout:      post
+tagline:     Sometimes you want git to ignore changes not files
+tags:        git
+title:       Make git look the other way
 ---
 
 There are some things that you don't want to commit to source control.
