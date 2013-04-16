@@ -20,6 +20,8 @@ sorted_categories:
   - planning
   - practices
 
+domain: http://ndlib.github.io
+
 authors:
 # - id:             github_username
 #   google_plus_id: https://plus.google.com/THIS_PART_HERE/posts

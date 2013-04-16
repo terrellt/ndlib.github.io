@@ -6,19 +6,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
 
     <title>{{ page.title }}</title>
-  {% if page.description %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title }}">
+{% if page.author %}{% for author in site.authors %}{% if author.id == page.author %}
+    <meta name="author" content="{{ author.name }}">{% if author.twitter %}
+    <meta name="twitter:creator" content="@{{ author.twitter }}">
+{% endif %}{% endif %}{% endfor %}{% endif %}{% if page.description %}
     <meta name="description" content="{{ page.description }}">
+    <meta name="twitter:description" content="{{ page.description }}">
   {% endif %}
-{% if page.author %}
-  {% for author in site.authors %}
-    {% if author.id == page.author %}
-    <meta name="author" content="{{ author.name }}">
-    {% endif %}
-  {% endfor %}
-{% endif %}
-    <meta name="viewport" content="width=device-width">
+    <meta name="twitter:url" content="{{ site.domain }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
     <link rel="stylesheet" href="/css/site.css" />
 
     <script src="/js/vendor/modernizr.js"></script>
