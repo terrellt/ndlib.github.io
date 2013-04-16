@@ -3,7 +3,7 @@ author:   danhorst
 category: practices
 filename: 2013-04-16-make-git-forget-things.md
 layout:   post
-tagline:  Sometimes you want `git` to ignore _changes_ not _files_
+tagline:  Sometimes you want git to ignore changes not files
 tags:     git
 title:    Make git look the other way
 ---
