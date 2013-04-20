@@ -33,6 +33,7 @@ I would highly recommend the following:
 
 * ["Practical Object-Oriented Design in Ruby" by Sandi Metz](http//practicaloodinruby.com)
 * ["Design Patterns in Ruby" by Russ Olsen](http://designpatternsinruby.com)
+* ["Ruby Best Practices" by Gregory T Brown](http://www.amazon.com/Ruby-Best-Practices-Gregory-Brown/dp/0596523009/ref=sr_1_14?ie=UTF8&qid=1366481685&sr=8-14&keywords=ruby+programming)
 
 ### Considerations
 
