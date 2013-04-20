@@ -27,6 +27,7 @@ tags:     ruby
 * [rbenv](https://github.com/sstephenson/rbenv/) - a less "intrusive" alternate to RVM
 * [Ruby Debugger](https://github.com/cldwalker/debugger) - a debugger for Ruby
 
+
 ### Books
 
 I would highly recommend the following Ruby and Rails books:
@@ -37,6 +38,10 @@ I would highly recommend the following Ruby and Rails books:
 * ["Agile Web Development with Rails" by Sam Ruby](http://pragprog.com/book/rails4/agile-web-development-with-rails)
 * ["Rails Test Prescriptions: Keeping Your Application Healthy" by Noel Rappin](http://pragprog.com/book/nrtest/rails-test-prescriptions)
 * ["Programming Ruby 1.9 (3rd Edition): The Pragmatic Programmer's Guide" by Dave Thomas with Chad Fowler and Andy Hunt](http://pragprog.com/book/ruby3/programming-ruby-1-9)
+
+I haven't read this, but Francis may very well be interested in it:
+
+* ["Build Awesome Command-Line Applications in Ruby: Control Your Computer, Simplify Your Life" by David Bryant Copeland](http://pragprog.com/book/dccar/build-awesome-command-line-applications-in-ruby)
 
 ### Considerations
 
