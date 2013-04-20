@@ -77,8 +77,8 @@ There are several types of tests that you could end up writing:
 
 * [Capybara](https://github.com/jnicklas/capybara) - "helps you test web applications by simulating how a real user would
 interact with your app."
-* [WebMock] (https://github.com/bblimke/webmock) - "Library for stubbing and setting expectations on HTTP requests in Ruby."
-* [Timecop] (http://github.com/travisjeffery/timecop) - "A gem providing "time travel" and "time freezing" capabilities"
+* [WebMock](https://github.com/bblimke/webmock) - "Library for stubbing and setting expectations on HTTP requests in Ruby."
+* [Timecop](http://github.com/travisjeffery/timecop) - "A gem providing "time travel" and "time freezing" capabilities"
 * [Guard](https://github.com/guard/guard) - "A command line tool to easily handle events on file system modifications"
 
 ## Tasks at Hand
