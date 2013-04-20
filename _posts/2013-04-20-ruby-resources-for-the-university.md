@@ -29,11 +29,14 @@ tags:     ruby
 
 ### Books
 
-I would highly recommend the following:
+I would highly recommend the following Ruby and Rails books:
 
 * ["Practical Object-Oriented Design in Ruby" by Sandi Metz](http//practicaloodinruby.com)
 * ["Design Patterns in Ruby" by Russ Olsen](http://designpatternsinruby.com)
 * ["Ruby Best Practices" by Gregory T Brown](http://www.amazon.com/Ruby-Best-Practices-Gregory-Brown/dp/0596523009/ref=sr_1_14?ie=UTF8&qid=1366481685&sr=8-14&keywords=ruby+programming)
+* ["Agile Web Development with Rails" by Sam Ruby](http://pragprog.com/book/rails4/agile-web-development-with-rails)
+* ["Rails Test Prescriptions: Keeping Your Application Healthy" by Noel Rappin](http://pragprog.com/book/nrtest/rails-test-prescriptions)
+* ["Programming Ruby 1.9 (3rd Edition): The Pragmatic Programmer's Guide" by Dave Thomas with Chad Fowler and Andy Hunt](http://pragprog.com/book/ruby3/programming-ruby-1-9)
 
 ### Considerations
 
