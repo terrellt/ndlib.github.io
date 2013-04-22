@@ -29,6 +29,7 @@ tags:     ruby
 * [Ruby Debugger](https://github.com/cldwalker/debugger) - a debugger for Ruby
 * [A Non-Exhaustive List of Helpful Troubleshooting Things](https://github.com/ldcx/ldcx-2013/blob/master/sessions/tools-for-troubleshooting-ruby.md)
 * [Rails for Zombies](http://railsforzombies.org/) - learn Rails the zombie way!
+* [Gemnasium](http://gemnasium.com) - keep up to date on your dependencies
 
 ### Books
 
