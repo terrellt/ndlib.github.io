@@ -26,7 +26,7 @@ tags:     ruby
 * [RVM](https://rvm.io/) - manage multiple versions of ruby on your machine
 * [rbenv](https://github.com/sstephenson/rbenv/) - a less "intrusive" alternate to RVM
 * [Ruby Debugger](https://github.com/cldwalker/debugger) - a debugger for Ruby
-
+* [A Non-Exhaustive List of Helpful Troubleshooting Things](https://github.com/ldcx/ldcx-2013/blob/master/sessions/tools-for-troubleshooting-ruby.md)
 
 ### Books
 
