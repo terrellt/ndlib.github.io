@@ -16,6 +16,7 @@ tags:     ruby
 * `gem` - a Ruby library, packaged up for easy inclusion in other projects.
 * `rails` - a web application framework that "put Ruby on the map"
 * `bundler` - a `gem` dependency management system
+* `capistrano` - a command line tool for remote SSH commands against multiple servers
 
 ### Links
 
