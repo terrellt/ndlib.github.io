@@ -17,7 +17,10 @@
 {% endif %}{% endif %}{% endfor %}{% endif %}{% if page.description %}
     <meta name="description" content="{{ page.description }}">
     <meta name="twitter:description" content="{{ page.description }}">
-  {% endif %}
+{% elsif page.author %}
+    <meta name="description" content="{{ page.content| markdownify | strip_html | truncatewords:50 }}">
+    <meta name="twitter:description" content="{{ page.content| markdownify | strip_html | truncatewords:50 }}">
+{% endif %}
     <meta name="twitter:url" content="{{ site.domain }}{{ page.url }}">
     <link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
     <link rel="stylesheet" href="/css/site.css" />
