@@ -17,23 +17,21 @@ What I have found is that I need to normalize my Git configurations.
 
 For each project (i.e. [Curate](https://github.com/ndlib/curate), [Sufia](https://github.com/projecthydra/curate), [ActiveFedora](https://github.com/projecthydra/active_fedora), etc.) I have converged on the following protocol:
 
-```
-[remote "origin"]
-  # This is a read-only URL; I can't accidentally push to it
-  url = git://github.com/ndlib/curate.git
-  fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
-  remote = origin
-  merge = refs/heads/master
-[remote "mine"]
-  # This is my branch; I'm pushing branches up to this remote for submitting pull requests
-  url = git@github.com:jeremyf/curate.git
-  fetch = +refs/heads/*:refs/remotes/mine/*
-[remote "__origin__"]
-  # This is a a read/write URL for the remote branch; I can use it in a pinch
-  url = git@github.com:ndlib/curate.git
-  fetch = +refs/heads/*:refs/remotes/mine/*
-```
+    [remote "origin"]
+      # This is a read-only URL; I can't accidentally push to it
+      url = git://github.com/ndlib/curate.git
+      fetch = +refs/heads/*:refs/remotes/origin/*
+    [branch "master"]
+      remote = origin
+      merge = refs/heads/master
+    [remote "mine"]
+      # This is my branch; I'm pushing branches up to this remote for submitting pull requests
+      url = git@github.com:jeremyf/curate.git
+      fetch = +refs/heads/*:refs/remotes/mine/*
+    [remote "__origin__"]
+      # This is a a read/write URL for the remote branch; I can use it in a pinch
+      url = git@github.com:ndlib/curate.git
+      fetch = +refs/heads/*:refs/remotes/mine/*
 
 The way this works for me is I regularly update my local repo from "origin" (via `git pull --rebase`).
 I use my remote repo solely for submitting pull requests.
