@@ -3,62 +3,82 @@ layout:    boilerplate
 presenter: post
 ---
 
-<section class="main" role="main" itemscope itemtype="http://schema.org/BlogPosting">
+<section role="main" class="page container" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="masthead">
-    {% if page.tagline %}
-    <hgroup itemprop="headline">
+  <div class="row">
+
+    <header class="span8 offset2 page-header">
+      {% if page.tagline %}
+      <hgroup itemprop="headline">
       <h1 class="headline instapaper_ignore">{{ page.title }}</h1> <span class="hidden">&mdash;</span>
       <h2 class="tagline">{{ page.tagline }}</h2>
-    </hgroup>
-    {% else %}
-    <h1 itemprop="headline" class="headline instapaper_ignore">{{ page.title }}</h1>
-    {% endif %}
-    <p class="subtle">
-{% if page.author %}{% for author in site.authors %}{% if author.id == page.author %}{% if author.url %}
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <a itemprop="url" href="{{ author.url }}"><span itemprop="name">{{ author.name }}</span></a>
-    </span> &mdash;
-    {% else %}
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">{{ author.name }}</span>
-    </span> &mdash;
-{% endif %}{% endif %}{% endfor %}{% endif %}{% if page.revised %}
-    <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>, revised on <time datetime="{{ page.revised | date:"%Y-%m-%d %H:%M" }}" itemprop="dateRevised">{{ page.revised | date:"%B %e, %Y" }}</time>
-{% else %}
-    <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>
-{% endif %}
-    </p>
-  </header>
+      </hgroup>
+      {% else %}
+      <h1 itemprop="headline" class="headline instapaper_ignore">{{ page.title }}</h1>
+      {% endif %}
+      <p class="muted">
+      {% if page.author %}{% for author in site.authors %}{% if author.id == page.author %}{% if author.url %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <a itemprop="url" href="{{ author.url }}"><span itemprop="name">{{ author.name }}</span></a>
+      </span> &mdash;
+      {% else %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ author.name }}</span>
+      </span> &mdash;
+      {% endif %}{% endif %}{% endfor %}{% endif %}{% if page.revised %}
+      <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>, revised on <time datetime="{{ page.revised | date:"%Y-%m-%d %H:%M" }}" itemprop="dateRevised">{{ page.revised | date:"%B %e, %Y" }}</time>
+      {% else %}
+      <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>
+      {% endif %}
+      </p>
+    </header>
 
-  <article itemprop="articleBody" class="instapaper_body">
+  </div>
 
-{{ content }}
-  </article>
+  <div class="row">
+
+    <article itemprop="articleBody" class="span8 offset2 instapaper_body">
+
+      {{ content }}
+    </article>
+
+  </div>
 
 </section>
 
-<footer class="page-footer">
-  <section class="content">
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+        <section>
 {% if page.author %}{% for author in site.authors %}{% if author.id == page.author %}{% if author.twitter %}
-      <p>
-        Please direct any comments or questions to <a href="https://www.twitter.com/{{ author.twitter }}">@{{ author.twitter }}</a>.
-      </p>
-  {% endif %}{% if author.google_plus_id %}
-      <p class="visuallyhidden google-authorship">
-        Find out more about me on <a href="https://plus.google.com/{{ author.google_plus_id }}?rel=author">Google+</a>.
-      </p>
-{% endif %}{% endif %}{% endfor %}{% endif %}{% if page.filename %}
-      <p>
-        The content of this page is <a href="https://github.com/ndlib/ndlib.github.io/blob/master/_posts/{{ page.filename }}">available on github</a>.
-      </p>
+          <p>
+            Please direct any comments or questions to <a href="https://www.twitter.com/{{ author.twitter }}">@{{ author.twitter }}</a>.
+          </p>
+{% endif %}{% if author.google_plus_id %}
+          <p class="google-authorship">
+            Find out more about the author on <a href="https://plus.google.com/{{ author.google_plus_id }}?rel=author">Google+</a>.
+          </p>
+{% endif %}{% endif %}{% endfor %}{% endif %}
+          <p class="muted">·</p>
+{% if page.filename %}
+          <p>
+            The content of this page is <a href="https://github.com/ndlib/ndlib.github.io/blob/master/_posts/{{ page.filename }}">available on github</a>.
+          </p>
 
-      <p>
-        Edits and <a href="http://help.github.com/send-pull-requests/">pull requests</a> are welcome.
-      </p>
-    {% endif %}
-  </section>
-  <nav class="navigation">
-    <a href="/">Home</a>
-  </nav>
+          <p>
+            Edits and <a href="http://help.github.com/send-pull-requests/">pull requests</a> are welcome.
+          </p>
+{% endif %}
+        </section>
+        <nav>
+          <ul class="footer-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </footer>

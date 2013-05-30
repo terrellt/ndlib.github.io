@@ -23,11 +23,12 @@
 {% endif %}
     <meta name="twitter:url" content="{{ site.domain }}{{ page.url }}">
     <link rel="canonical" href="{{ site.domain }}{{ page.url }}" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/site.css" />
 
     <script src="/js/vendor/modernizr.js"></script>
   </head>
-  <body class="page {{ page.presenter }} {{ page.category }}">
+  <body class="{{ page.presenter }} {{ page.category }}">
 
 {{ content }}
 
