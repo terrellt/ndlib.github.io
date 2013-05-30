@@ -90,6 +90,9 @@ At this point, I completely and entirely rework my commit message as per the [co
 
 Then I push the `development-service-object` branch to my remote repository, and issue a pull request to the "canonical" remote repository.
 
+_Note: If you've already pushed up to your remote repository and submitted a pull request, you can make local changes to the commit and use `git push -f` switch to replace your remote branch's commit with the new commit.
+And Github will seemlessly negotiate this change in the pull request._
+
 ## git squash
 <span id="git-squash"></span>
 
