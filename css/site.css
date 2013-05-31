@@ -25,20 +25,28 @@
 
 /* Local Styles
  * -------------------------------------------------- */
-.headline {
-	margin-bottom:0;
+html {
+	background-color: #fcfcfc;
 }
 
 .page {
 	padding-bottom: 70px;
 }
 
-.tagline {
-	font-size:17.5px;
-	font-weight:normal;
-	margin-top:0;
+.headline {
+	margin-bottom: 0;
 }
 
-html {
-  background-color: #fcfcfc;
+.tagline {
+	font-size: 17.5px;
+	font-weight: normal;
+	margin-top: 0;
+}
+
+.articles .listing {
+	margin-left: 0;
+}
+
+.articles .listing li {
+	list-style-type: none;
 }
