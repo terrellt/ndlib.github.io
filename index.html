@@ -15,20 +15,28 @@ title:    Hesburgh Libraries @ github
     <ul class="listing">
       {% for post in site.categories[category] limit: 10 %}
       <li itemscope itemtype="http://schema.org/Article">
-      <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{ post.title }}</span></a>
-      {% if post.revised %}
-      <span class="muted">
-        <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ post.date | date:"%Y-%m-%d" }}</time>,
-        revised on
-        <time datetime="{{ post.revised | date:"%Y-%m-%d %H:%M" }}" itemprop="dateRevised">{{ post.revised | date:"%Y-%m-%d" }}</time>
-      </span>
+      <h3 class="title">
+        <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{ post.title }}</span></a>
+      </h3>
+      <p class="muted">
+      {% if post.author %}{% for author in site.authors %}{% if author.id == post.author %}{% if author.url %}
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <a itemprop="url" href="{{ author.url }}"><span itemprop="name">{{ author.name }}</span></a>
+      </span> &mdash;
       {% else %}
-      <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated" class="muted">{{ post.date | date:"%Y-%m-%d" }}</time>
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ author.name }}</span>
+      </span> &mdash;
+      {% endif %}{% endif %}{% endfor %}{% endif %}{% if post.revised %}
+      <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ post.date | date:"%B %e, %Y" }}</time>, revised on <time datetime="{{ post.revised | date:"%Y-%m-%d %H:%M" }}" itemprop="dateRevised">{{ post.revised | date:"%B %e, %Y" }}</time>
+      {% else %}
+      <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ post.date | date:"%B %e, %Y" }}</time>
       {% endif %}
+      </p>
       </li>
-      {% endfor %}
+    {% endfor %}
     </ul>
-    <nav>
+    <nav class="text-right">
       <a href="/{{ category }}">All {{ category | capitalize}}</a>
     </nav>
   </div>

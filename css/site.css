@@ -54,3 +54,7 @@ html {
 .articles .listing li {
 	list-style-type: none;
 }
+
+.listing .title {
+  margin-bottom: 0;
+}
