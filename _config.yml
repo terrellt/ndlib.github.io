@@ -20,7 +20,7 @@ sorted_categories:
   - practices
   - planning
 
-domain: http://ndlib.github.io
+host: ndlib.github.io
 
 authors:
 # - id:             github_username
