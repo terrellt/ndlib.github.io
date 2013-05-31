@@ -29,6 +29,10 @@ html {
 	background-color: #fcfcfc;
 }
 
+.home {
+	border-bottom: 1px solid #e5e5e5;
+}
+
 .page {
 	padding-bottom: 70px;
 }
