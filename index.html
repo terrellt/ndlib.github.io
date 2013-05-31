@@ -14,7 +14,7 @@ title:    Hesburgh Libraries @ github
     <h2>{{ category | capitalize }}</h2>
     <ul class="listing">
       {% for post in site.categories[category] limit: 10 %}
-      <li itemscope itemtype="http://schema.org/Article">
+      <li itemscope itemtype="http://schema.org/BlogPosting">
       <h3 class="title">
         <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{ post.title }}</span></a>
       </h3>
