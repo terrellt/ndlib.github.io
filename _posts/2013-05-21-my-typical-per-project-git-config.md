@@ -9,8 +9,9 @@ tags:     git, hydra
 ---
 
 I am a contributor to various Github projects and organizations:
-  * [Project Hydra](https://github.com/projecthydra)
-  * [Hesburgh Libraries of Notre Dame](https://github.com/ndlib)
+
+* [Project Hydra](https://github.com/projecthydra)
+* [Hesburgh Libraries of Notre Dame](https://github.com/ndlib)
 
 Over the past year I've went from primarily working on my own projects, to collaborating on projects.
 What I have found is that I need to normalize my Git configurations.
