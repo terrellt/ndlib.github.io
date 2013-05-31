@@ -37,6 +37,11 @@ html {
 	padding-bottom: 70px;
 }
 
+.post .page-header h2,
+.post .page-header p {
+	margin-bottom: 0;
+}
+
 .headline {
 	margin-bottom: 0;
 }
@@ -57,4 +62,8 @@ html {
 
 .listing .title {
   margin-bottom: 0;
+}
+
+.pull-right {
+	float: right;
 }

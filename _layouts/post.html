@@ -30,6 +30,10 @@ presenter: post
       {% else %}
       <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>
       {% endif %}
+
+      <span class="pull-right">
+        <a itemprop="url" href="http://{{ site.host }}{{page.url}}">Permalink</a>
+      </span>
       </p>
     </header>
 
