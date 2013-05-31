@@ -2,21 +2,29 @@
 layout:   category
 title:    Planning &mdash; Hesburgh Libraries @ github
 ---
-<h1>Planning</h1>
+<div class="row">
+  <div class="span8 offset2 page-header">
+    <h1>Planning</h1>
+  </div>
+</div>
 
-<ul class="articles listing">
-  {% for post in site.categories.planning %}
-    <li itemscope itemtype="http://schema.org/Article">
-      <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{ post.title }}</span></a>
-      {% if post.revised %}
-        <span class="subtle">
+<div class="articles row">
+  <div class="span8 offset2">
+    <ul class="listing">
+      {% for post in site.categories.planning %}
+      <li itemscope itemtype="http://schema.org/Article">
+        <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{ post.title }}</span></a>
+        {% if post.revised %}
+        <span class="muted">
           <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ post.date | date:"%Y-%m-%d" }}</time>,
           revised on
           <time datetime="{{ post.revised | date:"%Y-%m-%d %H:%M" }}" itemprop="dateRevised">{{ post.revised | date:"%Y-%m-%d" }}</time>
         </span>
-      {% else %}
-        <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated" class="subtle">{{ post.date | date:"%Y-%m-%d" }}</time>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+        {% else %}
+        <time datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated" class="muted">{{ post.date | date:"%Y-%m-%d" }}</time>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

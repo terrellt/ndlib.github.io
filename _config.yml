@@ -17,8 +17,8 @@ exclude:
   - README.md
 
 sorted_categories:
-  - planning
   - practices
+  - planning
 
 domain: http://ndlib.github.io
 
