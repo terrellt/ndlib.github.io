@@ -18,6 +18,11 @@ title:    Hesburgh Libraries @ github
       <h3 class="title">
         <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{ post.title }}</span></a>
       </h3>
+      {% if post.tagline %}
+      <h4 class="tagline">
+        {{ post.tagline }}
+      </h4>
+      {% endif %}
       <p class="muted">
       {% if post.author %}{% for author in site.authors %}{% if author.id == post.author %}{% if author.url %}
       <span itemprop="author" itemscope itemtype="http://schema.org/Person">
