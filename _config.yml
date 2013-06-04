@@ -21,6 +21,9 @@ sorted_categories:
   - planning
 
 host: ndlib.github.io
+description: Notre Dame Hesburgh Libraries developer blog
+url: http://ndlib.github.io
+name: Hesburgh Libraries @ github
 
 authors:
 # - id:             github_username
