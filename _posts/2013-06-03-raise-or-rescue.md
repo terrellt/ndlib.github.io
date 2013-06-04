@@ -8,7 +8,7 @@ title:    Raise or Rescue
 tags:     ruby, rails
 ---
 
-In my [previous post](./2013-06-03-object-interfaces.md), I created the Book and Citation class, repeated here.
+In my [previous post](../object-interfaces), I created the Book and Citation class, repeated here.
 
     Book = Struct.new(:title, :author, :publisher)
 
@@ -123,7 +123,7 @@ In fact, no amount of end user data manipulation would be able to correct this.
 So we `send_error_notification_to_team!` and render some text apologizing.
 After all, someone on the development team may have improperly implemented the Book interface.
 
-# Further Reading
+## Further Reading
 
-["Exceptional Ruby" by Avdi Grimm](http://)
-[Rails's :rescue_from method](http://guides.rubyonrails.org/)
+* ["Exceptional Ruby" by Avdi Grimm](https://shiprise.dpdcart.com/)
+* [Rails's :rescue_from method](http://guides.rubyonrails.org/action_controller_overview.html#rescue_from)

@@ -101,7 +101,8 @@ By renaming the Citation class I am giving clues to a future developer – self 
 The above implementation ensures that the Citation object can collaborate with the Book object.
 The `Citation#initialize` method defines the expected interface that a citable object should implement.
 
+A [follow-up post concerning raise or rescue](../raise-or-rescue), I created the Book and Citation class, repeated here.
 
-# Further Reading
+## Further Reading
 
-"Confident Ruby" by Avdi Grimm
+* ["Confident Ruby" by Avdi Grimm](https://shiprise.dpdcart.com/)
