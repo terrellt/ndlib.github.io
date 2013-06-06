@@ -58,11 +58,11 @@ Alan Kay, an author of Smalltalk, coined the term object-oriented, positing that
 
 Think of isolated tests as testing a single cell.
 This is where you make sure the cell is operating in a well-structured manner.
-*Isolated tests ensure that you are doing it the right way.*
+*Isolated tests help me write code the right way.*
 
 Think of integrated tests as tests that coordinate the interaction of multiple cells.
 This is where you make sure your organism is operating as expected.
-*Integrated tests ensure that what you are doing is right.*
+*Integrated tests help me write code that is doing the right thing.*
 
 I would highly recommend "The Clean Coder: A Code of Conduct for Professional Programmers" by Robert C. Martin. In chapter 8 he explains the various tests, as well as the ratio of each type of test.
 
@@ -73,15 +73,21 @@ Install Hydra
 
 Download Jetty
 
-Wire up Rspec
+Wire up Rspec and Capybara
 
-Wire Up Capybara
+Write Your First Integrated Test
 
-Write Your First Test
+Write Your Second Integrated Test
 
-Immediately get Capybara going
-  - test the catalog controller
-  - a word of caution, Capybara tests are fragile
+Working with Warden and Devise
+
+### A Word of Caution
+
+By their very nature, Capybara tests are extremely fragile.
+You are testing your UI, an extremely volitale windown into your application;
+Your Capybara tests will creak, groan, and very likely break with alarming frequency.
+But they will be helpful.
+Just keep the number and scope of integrated tests well groomed.
 
 ## But My Project is Already Started
 <span id="but-my-project-is-already-started"></span>
