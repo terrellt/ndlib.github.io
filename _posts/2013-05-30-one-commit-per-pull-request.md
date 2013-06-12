@@ -48,7 +48,7 @@ I want to squash those commits into a single commit so I can submit a pull reque
 To do this I first make sure my repository is up to date:
 
     $ git checkout master
-    $ git pull --rebase canonical # The remote repo that is "canonical"
+    $ git pull --rebase origin # The remote repo that is "origin"
     $ git checkout development-service-object
     $ git rebase master
 
@@ -88,7 +88,7 @@ And get the following default commit message to rewrite:
 
 At this point, I completely and entirely rework my commit message as per the [contributing guidelines](https://github.com/projecthydra/hydra-head/blob/master/CONTRIBUTING.md) of the project.
 
-Then I push the `development-service-object` branch to my remote repository, and issue a pull request to the "canonical" remote repository.
+Then I push the `development-service-object` branch to my remote repository, and issue a pull request to the "origin" remote repository.
 
 _Note: If you've already pushed up to your remote repository and submitted a pull request, you can make local changes to the commit and use `git push -f` switch to replace your remote branch's commit with the new commit.
 And Github will seemlessly negotiate this change in the pull request._
