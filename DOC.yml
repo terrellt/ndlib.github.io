@@ -1,0 +1,26 @@
+id: ndlib.github.io
+name: ndlib.github.io
+owner: jfriesen
+developers:
+  - dbrower
+  - jfriesen
+  - dbrubak1
+  - blakshmi
+  - rbalekai
+purpose: >
+  DLT's public facing bloggin platform
+audience: >
+  The World
+dependencies:
+  -
+hosts:
+  -
+urls:
+  -
+setup: >
+
+deploy: >
+
+last_review:
+  date: 2013-06-24
+  reviewer: jfriesen
