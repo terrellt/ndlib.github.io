@@ -22,7 +22,11 @@
     <meta name="twitter:description" content="{{ page.content| markdownify | strip_html | truncatewords:50 }}">
 {% endif %}
     <meta name="twitter:url" content="http://{{ site.host }}{{ page.url }}">
+{% if page.reblog %}
+    <link rel="canonical" href="{{ page.reblog }}" />
+{% else %}
     <link rel="canonical" href="http://{{ site.host }}{{ page.url }}" />
+{% endif %}
     <link rel="alternate" href="http://{{ site.host }}/feed" title="ATOM Feed" type="application/atom+xml" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/site.css" />

@@ -44,6 +44,13 @@ presenter: post
     <article itemprop="articleBody" class="span8 offset2 instapaper_body">
 
       {{ content }}
+      {% if page.reblog %}
+      <hr/>
+
+      <blockquote class="reblog-notice">
+        <p>This post was origionally published on another site: <a href="{{ page.reblog }}">{{ page.reblog }}</a></p>
+      </blockquote>
+      {% endif %}
     </article>
 
   </div>

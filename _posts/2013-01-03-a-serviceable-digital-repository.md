@@ -3,6 +3,7 @@ author:   danhorst
 category: planning
 filename: 2013-01-03-a-serviceable-digital-repository.md
 layout:   post
+reblog:   'http://www3.nd.edu/~dbrubak1/planning/a-serviceable-digital-repository/'
 tagline:  Building A Digital Repository We Can Live With
 title:    A Serviceable IDR
 ---
