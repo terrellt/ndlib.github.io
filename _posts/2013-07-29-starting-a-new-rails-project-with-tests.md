@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2013-06-06-starting-a-new-rails-project-with-tests.md
+filename: 2013-07-29-starting-a-new-rails-project-with-tests.md
 layout:   post
 tagline:  Start Doing What You Should Be Doing
 title:    Starting a New Rails Project with Tests
