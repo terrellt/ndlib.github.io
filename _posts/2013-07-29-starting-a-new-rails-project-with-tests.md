@@ -13,10 +13,10 @@ tags:     ruby, rails, testing, hydra, rspec
 This post is to help you get started writing your first test for a Hydra powered Rails project.
 It is generally applicable for writing your first integration test for a Rails project.
 
-* [My First Rails Project]('#my-first-rails-project')
-* [Types of Tests]('#types-of-tests')
-* [Write Your First Rails Test]('#write-your-first-rails-test')
-* [But My Project is Already Started]('#but-my-project-is-already-started')
+* [My First Rails Project](#my-first-rails-project)
+* [Types of Tests](#types-of-tests)
+* [Write Your First Rails Test](#write-your-first-rails-test)
+* [But My Project is Already Started](#but-my-project-is-already-started)
 
 <blockquote>
 We write tests first because we find that it helps us write better code.
