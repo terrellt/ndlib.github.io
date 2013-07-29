@@ -69,17 +69,12 @@ I would highly recommend "The Clean Coder: A Code of Conduct for Professional Pr
 ## Write Your First Rails Test
 <span id="write-your-first-rails-test"></span>
 
-Install Hydra
+As a contributor to [Hydra projects](http://projecthydra.org), I am aware that there new Rails developers joining the project.
+I wanted to provide a "for developers" walk through for creating a new Hydra project, with testing at the forefront.
 
-Download Jetty
-
-Wire up Rspec and Capybara
-
-Write Your First Integrated Test
-
-Write Your Second Integrated Test
-
-Working with Warden and Devise
+So I wrote a [Hydra Capybara Walkthrough](https://github.com/jeremyf/hydra-capybara-walkthrough).
+Go ahead and clone the repository and step through the commit logs.
+(Note: It is assumed you are somewhat familiar with git)
 
 ### A Word of Caution
 
