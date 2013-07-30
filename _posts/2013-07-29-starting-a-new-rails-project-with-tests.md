@@ -73,8 +73,17 @@ As a contributor to [Hydra projects](http://projecthydra.org), I am aware that t
 I wanted to provide a "for developers" walk through for creating a new Hydra project, with testing at the forefront.
 
 So I wrote a [Hydra Capybara Walkthrough](https://github.com/jeremyf/hydra-capybara-walkthrough).
-Go ahead and clone the repository and step through the commit logs.
-(Note: It is assumed you are somewhat familiar with git)
+It would be helfpul to read through the [commit log in reverse order (earliest to latest)](https://github.com/jeremyf/hydra-capybara-walkthrough/blob/master/COMMIT-LOG-REVERSE.md).
+
+Of particular interest are:
+
+* [Adding spec and comments for testing catalog [f7d44ae]](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/f7d44ae1bbe2fbb62e72b7f9831cd64ad8ad5fe7). This is my comments for the first test I want to write.
+* [Writing executable tests for capybara tests [1c3b445]](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/1c3b445c3f77e8a87b3675d2539ee0770853f017). Converting the comments into functional ruby code.
+* [Adding Thing model and corresponding spec [f7492b9]](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/f7492b95ad33a8f0e9904e441f35e76851ae492e). Using an ActiveFedora generator for a model. I get a free test.
+* [Adding a datastream and title to Thing [4c366ff]](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/4c366ff891ba35ee7c74fa131c31554f742479cb). Making the Thing do something.
+* Refactoring spec to consolidate behavior [dcc4423](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/dcc4423b5877c7f319eeeff0d8d9c25fcc77ce20). Don't forget that refactoring your tests is just as important.
+* [Adding persistence verification for Thing [bf9cf0f]](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/bf9cf0fee1192527df3afaa3c704e9d4d1bed101). Think about writing custom RSpec matchers. By writing a custom matcher, you are encoding what a potentially large chunk of test code means. And it becomes reusable.
+* [Adding end to end test of creation [5f8a30b]](https://github.com/jeremyf/hydra-capybara-walkthrough/commit/5f8a30b778197b9aba48eb52ff16434ba1142dbd). Verify that the application is behaving by writing a straight forward Capybara spec.
 
 ### A Word of Caution
 
