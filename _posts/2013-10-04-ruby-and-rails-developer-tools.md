@@ -10,6 +10,22 @@ tags:     ruby
 
 Below is a non-exhaustive list of tools to aid in ruby development.
 
+## Rspec
+
+> RSpec is testing tool for the Ruby programming language. Born under the banner
+> of Behaviour-Driven Development, it is designed to make Test-Driven
+> Development a productive and enjoyable experience
+
+The Open Source ecosystem is fast-moving. Things are evolving. I write tests to:
+
+* better understand the problem I'm trying to solve
+* help ease the pain of change
+* improving my chances of finding problems with the changes
+
+Therefore if I am going to use Open Source, I must write tests.
+
+A [detailed walkthrough via Git annotations](https://github.com/jeremyf/hydra-camp-testing).
+
 ## Bundler
 
 > Bundler maintains a consistent environment for ruby applications. It tracks an
