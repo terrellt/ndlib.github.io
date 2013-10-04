@@ -10,6 +10,15 @@ tags:     ruby
 
 Below is a non-exhaustive list of tools to aid in ruby development.
 
+## Rubygems.org
+
+Given that your Gemfile has the following:
+
+    gem 'active-fedora'
+
+Goto [rubygems.org/gems/active-fedora](http://rubygems.org/gems/active-fedora) and review that page.
+You will find links for Documentation, Source Code, Dependencies, etc.
+
 ## Rspec
 
 > RSpec is testing tool for the Ruby programming language. Born under the banner
