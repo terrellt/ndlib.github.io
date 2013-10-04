@@ -16,15 +16,49 @@ Below is a non-exhaustive list of tools to aid in ruby development.
 > of Behaviour-Driven Development, it is designed to make Test-Driven
 > Development a productive and enjoyable experience
 
-The Open Source ecosystem is fast-moving. Things are evolving. I write tests to:
+In your Gemfile add the following:
 
-* better understand the problem I'm trying to solve
-* help ease the pain of change
-* improving my chances of finding problems with the changes
+    group :development, :test do
+      gem 'rspec-rails'
+    end
 
-Therefore if I am going to use Open Source, I must write tests.
+Then run `rails generate rspec:install`.
+
+With an Rspec test suite, run `rspec --format documentation` to see the more "human friendly" assertions.
 
 A [detailed walkthrough via Git annotations](https://github.com/jeremyf/hydra-camp-testing).
+
+## Simplecov
+
+> Code coverage for Ruby 1.9+ with a powerful configuration library…
+
+In your Gemfile add the following:
+
+    gem 'simplecov', :require => false, :group => :test
+
+Then in your `spec/spec_helper.rb`
+
+    require 'simplecov'
+    SimpleCov.start
+
+## VCR
+
+> Record your test suite's HTTP interactions and replay them during future test
+> runs for fast, deterministic, accurate tests.
+
+Odds are good that you will be incorporating web services in your application.
+And testing those things is very slow. Use VCR to record your HTTP interactions
+for tests then in future tests use the recorded tapes.
+
+**More at [github.com/vcr/vcr](https://github.com/vcr/vcr)**
+
+## Travis-CI
+
+Free Continuous Integration for Open Source projects. Greatly improves project collaboration.
+
+Let the cloud run your tests!
+
+**More at [travis-ci.org](https://travis-ci.org/)**
 
 ## Bundler
 
@@ -130,15 +164,24 @@ A bug was introduced somewhere in the code. At commit "A" things were working. A
 * `git bisect good <sha for commit A>`
 * `git bisect run ./path/to/test.sh`
 
-**More at [blogs.nd.edu/jeremyfriesen](http://blogs.nd.edu/jeremyfriesen/2012/10/08/using-git-bisect-for-finding-when-a-bug-was-introduced/)**
+**A more detailed run through at [blogs.nd.edu/jeremyfriesen](http://blogs.nd.edu/jeremyfriesen/2012/10/08/using-git-bisect-for-finding-when-a-bug-was-introduced/)**
+
+## ND's Puppet Scripts for Building a VM for Curate
+
+> Puppet is IT automation software that helps system administrators manage
+> infrastructure throughout its lifecycle, from provisioning and configuration
+> to orchestration and reporting.
+
+Hydra is a complicated stack, there are steps to help ease the deployment.
+
+**Notre Dame's Scripts at [github.com/ndlib/curate_nd/tree/master/puppet](https://github.com/ndlib/curate_nd/tree/master/puppet)**
 
 ## Ruby Toolbox
 
 A resource for looking up gems by category and seeing usage and maintenance
 statistics. More info at [ruby-toolbox.com](https://www.ruby-toolbox.com/)
 
-## Developer Resources
+## Further Hydra Developer Resources
 
-* https://ndlib.github.io
 * irc://freenode.net#projecthydra
 * hydra-tech@googlegroups.com
