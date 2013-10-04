@@ -19,6 +19,11 @@ Given that your Gemfile has the following:
 Goto [rubygems.org/gems/active-fedora](http://rubygems.org/gems/active-fedora) and review that page.
 You will find links for Documentation, Source Code, Dependencies, etc.
 
+## Ruby on Rails Guides and API
+
+[Rails Guide](http://guides.rubyonrails.org) is an excellent resource on how to do things in Rails.
+[Rails API](http://api.rubyonrails.org) is a resource documenting the code API.
+
 ## Rspec
 
 > RSpec is testing tool for the Ruby programming language. Born under the banner
