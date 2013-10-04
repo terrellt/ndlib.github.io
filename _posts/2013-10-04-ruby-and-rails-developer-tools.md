@@ -47,9 +47,17 @@ A [detailed walkthrough via Git annotations](https://github.com/jeremyf/hydra-ca
 
 In your Gemfile add the following:
 
-* `gem 'better_errors'`
+    group :development do
+      gem "better_errors"
+      gem "binding_of_caller"
+    end
 
 Then in your browser start clicking around and trying to break things.
+
+> * Full stack trace
+> * Source code inspection for all stack frames (with highlighting)
+> * Local and instance variable inspection
+> * Live REPL on every stack frame
 
 More info at [github.com/charliesome/better_errors](https://github.com/charliesome/better_errors)
 
