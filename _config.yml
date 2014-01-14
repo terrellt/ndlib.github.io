@@ -1,7 +1,5 @@
-server:          true
-auto:            true
-server_port:     4000
-analytics_token: 'UA-XXXXXXXX-X'
+port: 4000
+analytics_token: 'UA-2118378-32'
 
 markdown: rdiscount
 rdiscount:
