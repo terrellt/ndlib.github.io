@@ -3,7 +3,7 @@ author:   jeremyf
 category: practices
 filename: 2014-04-19-consider-many-small-classes.md
 layout:   post
-tagline:  Like on Moving Day, Its Easier to Move Many Small Things
+tagline:  Its Easier to Deal with Many Small Things
 title:    Consider Many Small Classes
 tags:     ruby
 ---
@@ -57,3 +57,45 @@ I should take a cue from Corey Haines:
 
 My interpretation of this is that modules are a valid stepping stone for refactoring.
 But they should not be the final stop.
+
+## In the Wild
+
+Let's look at the User object for Curate.
+Below is the simplified User class that is generated as part of the test suite.
+
+```ruby
+class User < ActiveRecord::Base
+  include Sufia::User
+  include Curate::UserBehavior
+  include Hydra::User
+  include Blacklight::User
+
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+```
+
+Now take a look at all the modules that go into the User class.
+Good luck troubleshooting that beast.
+
+```console
+$ rails r "puts User.included_modules.join(', ')"
+
+Devise::Models::Trackable, Devise::Models::Confirmable, ActionView::Helpers::DateHelper, Devise::Models::Validatable, Devise::Models::Registerable, Devise::Models::Recoverable, Devise::Models::Rememberable, Devise::Models::DatabaseAuthenticatable, Devise::Models::Authenticatable, Curate::UserBehavior, Curate::UserBehavior::Delegates, Curate::UserBehavior::WithAssociatedPerson, Curate::UserBehavior::Base, Paperclip::InstanceMethods, ActsAsFollower::Followable::InstanceMethods, ActsAsFollower::FollowerLib, ActsAsFollower::Follower::InstanceMethods, Hydra::User, Blacklight::User, Mailboxer::Models::Messageable, Sufia::User, Kaminari::ConfigurationMethods, Kaminari::ActiveRecordModelExtension, User::GeneratedFeatureMethods, #<Module:0x007f91351c31d0>, ActiveRecord::DeprecatedAttrAccessible, Paperclip::Schema, Paperclip::Validators::HelperMethods, Paperclip::Validators, Paperclip::Callbacks::Running, Paperclip::Callbacks, Paperclip::Glue, ActsAsFollower::Followable, ActsAsFollower::Follower, Kaminari::ActiveRecordExtension, CanCan::ModelAdditions, ActiveRecord::Core, ActiveRecord::Store, ActiveRecord::Serialization, ActiveModel::Serializers::Xml, ActiveModel::Serializers::JSON, ActiveModel::Serialization, ActiveRecord::Reflection, ActiveRecord::Transactions, ActiveRecord::Aggregations, ActiveRecord::NestedAttributes, ActiveRecord::AutosaveAssociation, ActiveModel::SecurePassword, ActiveRecord::Associations, ActiveRecord::Timestamp, ActiveModel::Validations::Callbacks, ActiveRecord::Callbacks, ActiveRecord::AttributeMethods::Serialization, ActiveRecord::AttributeMethods::Dirty, ActiveModel::Dirty, ActiveRecord::AttributeMethods::TimeZoneConversion, ActiveRecord::AttributeMethods::PrimaryKey, ActiveRecord::AttributeMethods::Query, ActiveRecord::AttributeMethods::BeforeTypeCast, ActiveRecord::AttributeMethods::Write, ActiveRecord::AttributeMethods::Read, #<Module:0x007f9130d80900>, ActiveRecord::AttributeMethods, ActiveModel::AttributeMethods, ActiveRecord::Locking::Pessimistic, ActiveRecord::Locking::Optimistic, ActiveRecord::CounterCache, ActiveRecord::Validations, ActiveModel::Validations::HelperMethods, ActiveSupport::Callbacks, ActiveModel::Validations, ActiveRecord::Integration, ActiveModel::Conversion, ActiveRecord::AttributeAssignment, ActiveModel::ForbiddenAttributesProtection, ActiveModel::DeprecatedMassAssignmentSecurity, ActiveRecord::Sanitization, ActiveRecord::Scoping::Named, ActiveRecord::Scoping::Default, ActiveRecord::Scoping, ActiveRecord::Inheritance, ActiveRecord::ModelSchema, ActiveRecord::ReadonlyAttributes, ActiveRecord::Persistence, PP::ObjectMixin, ActiveSupport::Dependencies::Loadable, Loggable::InstanceMethods, V8::Conversion::Object, JSON::Ext::Generator::GeneratorMethods::Object, Kernel
+```
+
+This is a common Rails inspired pattern.
+ActiveSupport::Concern makes it stupid easy to create mixin modules.
+
+This may be reasonable if you truly test your modules in isolation.
+But do you?
+Are the modules independent?
+Do they have intimate knowledge of some other module that "must be mixed in?"
+
+I know that I've extracted modules but failed to test them in isolation.
+And what happens?
+The object becomes resistent to change.
+
+So I will strive to remember that what is fast today will cause grief tomorrow.
+I will focus on passing tests, expressing intent, not repeating knowledge, and keeping things small.
