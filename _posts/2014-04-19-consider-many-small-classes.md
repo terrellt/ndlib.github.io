@@ -51,9 +51,9 @@ And soon I had a big ball of mud.
 
 I should take a cue from Corey Haines:
 
->> "I use modules in this way as a step in the path towards a better design.
->> Separating out aspects of a class into modules can help find hidden dependencies, as well as highlight all the different responsibilities a class has.
->> But they are rarely the place to stop." -- Understanding the Four Rules of Simple Design
+> "I use modules in this way as a step in the path towards a better design.
+> Separating out aspects of a class into modules can help find hidden dependencies, as well as highlight all the different responsibilities a class has.
+> But they are rarely the place to stop." -- Understanding the Four Rules of Simple Design
 
 My interpretation of this is that modules are a valid stepping stone for refactoring.
 But they should not be the final stop.

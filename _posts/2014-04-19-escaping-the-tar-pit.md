@@ -64,7 +64,7 @@ So at least they are less likely to lie to you!
 
 There may be a few reasons for this. Consider the following statement that I've heard several times:
 
->> Its working, now I need to write a test.
+> Its working, now I need to write a test.
 
 How does this person know its working?
 They likely implemented the solution, manually tested it along the way.
@@ -190,12 +190,18 @@ Could we get someone with previous experience facilitating a Code Retreat?
 
 ### Acceptance Tests
 
->> "Acceptance tests [are] tests written by a collaboration of the stakeholders and the programmers in order to define when a requirement is done...The purpose of acceptance tests is communication, clarity, and precision. By agreeing to them, the developers, stakeholders, and testers all understand what the plan for the system behavior is." -- Martin, Robert C. (2011-05-13). "The Clean Coder"
+> "Acceptance tests [are] tests written by a collaboration of the stakeholders and the programmers in order to define when a requirement is done...
+> The purpose of acceptance tests is communication, clarity, and precision.
+> By agreeing to them, the developers, stakeholders, and testers all understand what the plan for the system behavior is."
+> -- Martin, Robert C. (2011-05-13). "The Clean Coder"
 
 Acceptance tests are extremely valuable.
 We should take the time to craft these.
 
->> "Acceptance tests should always be automated. There is a place for manual testing elsewhere in the software lifecycle, but these kinds of tests should never be manual. The reason is simple: cost." -- Martin, Robert C. (2011-05-13). "The Clean Coder"
+> "Acceptance tests should always be automated.
+> There is a place for manual testing elsewhere in the software lifecycle, but these kinds of tests should never be manual.
+> The reason is simple: cost."
+> -- Martin, Robert C. (2011-05-13). "The Clean Coder"
 
 As a developer I believe these should be automated.
 After all, if I'm working on something and changed things, I should know if what I did was not acceptable.
