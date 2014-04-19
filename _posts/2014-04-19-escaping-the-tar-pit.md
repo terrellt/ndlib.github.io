@@ -95,7 +95,7 @@ It is responsible for a lot of things.
 
 A few years ago the Rails community clamoured for skinny controllers and fat models.
 Extract the complexity to the models.
-Then came the movement to put models on a diet as well.
+Then came the [movement to put models on a diet](http://blog.codeclimate.com/blog/2012/10/17/7-ways-to-decompose-fat-activerecord-models/) as well. [And the diet continues.](http://blog.sensible.io/2014/04/19/don-t-just-dump-code-into-your-models.html)
 
 The tragedy of Model/View/Controller, especially in the Rails implementation, is the implaction that there are only three types of objects.
 
