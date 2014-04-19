@@ -77,7 +77,6 @@ class User < ActiveRecord::Base
 ```
 
 Now take a look at all the modules that go into the User class.
-Good luck troubleshooting that beast.
 
 ```console
 $ rails r "puts User.included_modules.join(', ')"
@@ -89,13 +88,13 @@ This is a common Rails inspired pattern.
 ActiveSupport::Concern makes it stupid easy to create mixin modules.
 
 This may be reasonable if you truly test your modules in isolation.
-But do you?
+But do you? Do I?
 Are the modules independent?
 Do they have intimate knowledge of some other module that "must be mixed in?"
 
 I know that I've extracted modules but failed to test them in isolation.
-And what happens?
-The object becomes resistent to change.
+And what happened?
+The object became resistent to change.
 
 So I will strive to remember that what is fast today will cause grief tomorrow.
 I will focus on passing tests, expressing intent, not repeating knowledge, and keeping things small.
