@@ -168,7 +168,7 @@ This would've given me a different perspective; one that documented how the syst
 
 ### A Reading List
 
-I read in one sitting - the fligth from South Bend to Minneapolis - [Corey Haines's "Understanding the 4 Rules of Simple Design"](http://leanpub.com/4rulesofsimpledesign). He dives into the well established four rules, as earlier codified by Kent Beck:
+I read in one sitting - the flight from South Bend to Minneapolis - [Corey Haines's "Understanding the 4 Rules of Simple Design"](http://leanpub.com/4rulesofsimpledesign). He dives into the well established four rules, as earlier codified by Kent Beck:
 
 1. Tests Pass
 2. Express Intent
@@ -255,6 +255,7 @@ I really like Jim Weirich's approach in his Controller / Runner interaction:
 * A controller handles the appropriate callback
 
 From [Jim Weirich's Wyriki PagesController](https://github.com/jimweirich/wyriki/blob/master/app/controllers/pages_controller.rb#L1-L19)
+
 ```ruby
 class PagesController < ApplicationController
   include PageRunners
