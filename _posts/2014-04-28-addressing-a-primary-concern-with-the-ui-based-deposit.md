@@ -56,7 +56,7 @@ Consider the following simple POST request: `https://curate.nd.edu/concern/artic
     * File characterization
     * Derivative generation
     * Piece-meal posting to Fedora; Since Fedora 3 is non-transactional, we need to do this iteratively.
-    * Post SOLR document updates in one request; This acknowledges the transactional behavior of SOLR and possible failures during the above process.
+    * Once you are done posting to Fedora, begin posting to SOLR; Issuing one commit per post.
     * Tidy up simple storage document
     * Notify submitter (and others) that ingest has completed
 
