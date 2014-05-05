@@ -8,6 +8,12 @@ title:    Should we stop implementing behavior methods in Active Record pattern 
 tags:     ruby, rails
 ---
 
+http://martinfowler.com/bliki/AnemicDomainModel.html
+
+http://www.martinfowler.com/eaaCatalog/activeRecord.html
+
+http://www.martinfowler.com/eaaCatalog/dataMapper.html
+
 Consider the following code:
 
 ```ruby
