@@ -5,7 +5,7 @@ markdown: rdiscount
 rdiscount:
   extensions: [smart]
 
-pygments:  false
+pygments:  true
 permalink: /:categories/:title/
 
 exclude:
