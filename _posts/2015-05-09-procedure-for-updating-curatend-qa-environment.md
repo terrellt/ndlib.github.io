@@ -38,6 +38,11 @@ Which means these maintenance tasks are on our `master` branch.
 1. Rebuild the Fedora, SOLR, application database
   * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-FedoraDB-Rebuild/build?delay=0sec)
     * **host:** libvirt8.library.nd.edu
+1. Deploy the application changes (because you'll run updates against this)
+  * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
+    * **cap_task:** deploy
+    * **host:** libvirt8
+    * **deploy_tag:** curatend-with-vanilla-data
 1. Migrate the application database to reflect
   * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** maintenance:vanilla_to_nd_schema
@@ -50,7 +55,7 @@ Which means these maintenance tasks are on our `master` branch.
     * **deploy_tag:** master
 1. Review Migrator Log on libvirt8:
   * `CURATEND_ROOT/log/staging-migrator.log`
-1. Deploy the application changes
+1. Deploy the application changes again
   * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** deploy
     * **host:** libvirt8
