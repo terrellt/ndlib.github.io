@@ -8,6 +8,8 @@ title:    Leveraging Git in Iterating Towards a Release
 tags:     git
 ---
 
+**[Sibling Blog Post regarding Deployment](/procedures/2015-05-09-procedure-for-updating-curatend-qa-environment.md)**
+
 We are in the process of deploying changes from the [Curate Engine](https://github.com/projecthydra-labs/curate) to our [CurateND application](https://curate.nd.edu).
 This has involved a multi-step git coordination.
 

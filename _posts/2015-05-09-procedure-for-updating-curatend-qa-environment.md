@@ -8,6 +8,8 @@ title:    Procedure for updating CurateND QA Environment
 tags:     deploy
 ---
 
+**[Sibling Blog Post regarding Branching Strategy](/practices/leveraging-git-in-iterating-towards-a-release/)**
+
 ## Steps to Refresh the Staging/QA Environment
 
 We are presently using `libvirt8.library.nd.edu` as our quality assurance/staging machine.
@@ -15,7 +17,7 @@ The target audience for this blog post is our internal team.
 However you may find some high level ideas helpful.
 
 First, understand the branching strategy.
-More on [the branching strategy for releasing CurateND](http://ndlib.github.io/practices/leveraging-git-in-iterating-towards-a-release/)
+More on [the branching strategy for releasing CurateND](/practices/leveraging-git-in-iterating-towards-a-release/)
 
 ## Make sure that CurateND's code is fresh:
 
