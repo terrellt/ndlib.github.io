@@ -17,6 +17,7 @@ exclude:
 sorted_categories:
   - practices
   - planning
+  - procedures
 
 host: ndlib.github.io
 description: Notre Dame Hesburgh Libraries developer blog
