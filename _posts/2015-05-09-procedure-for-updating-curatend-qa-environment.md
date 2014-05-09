@@ -48,6 +48,8 @@ Which means these maintenance tasks are on our `master` branch.
     * **cap_task:** maintenance:migrate_metadata
     * **host:** libvirt8
     * **deploy_tag:** master
+1. Review Migrator Log on libvirt8:
+  * `CURATEND_ROOT/log/staging-migrator.log`
 1. Deploy the application changes
   * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** deploy
