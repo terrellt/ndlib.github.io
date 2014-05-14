@@ -35,28 +35,27 @@ More on [the branching strategy for releasing CurateND](/practices/leveraging-gi
 Due to the constraints of our Jenkin's implementation, [Capistrano](http://capistranorb.com/) tasks must be run from the `master` branch.
 Which means these maintenance tasks are on our `master` branch.
 
-1. Rebuild the Fedora, SOLR, application database
-  * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-FedoraDB-Rebuild/build?delay=0sec)
+1. Rebuild the Fedora, SOLR, application database [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-FedoraDB-Rebuild/build?delay=0sec)
     * **host:** libvirt8.library.nd.edu
-1. Deploy the application changes (because you'll run updates against this)
-  * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
+1. Deploy the application changes (because you'll run updates against this) [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** deploy
     * **host:** libvirt8
     * **deploy_tag:** curatend-with-vanilla-data
-1. Migrate the application database to reflect
-  * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
+1. Migrate the application database to reflect [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** maintenance:vanilla_to_nd_schema
     * **host:** libvirt8
     * **deploy_tag:** master
-1. Migrate the work data structures
-  * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
+1. Migrate the work data structures [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** maintenance:migrate_metadata
     * **host:** libvirt8
     * **deploy_tag:** master
 1. Review Migrator Log on libvirt8:
   * `CURATEND_ROOT/log/staging-migrator.log`
-1. Deploy the application changes again
-  * [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
+1. Migrate the profile section access policies [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
+    * **cap_task:** maintenance:update_profile_section_to_open_access
+    * **host:** libvirt8
+    * **deploy_tag:** master
+1. Deploy the application changes again [Jenkin's Task](https://jenkins.library.nd.edu/jenkins/job/CurateND-STANDALONE/build?delay=0sec)
     * **cap_task:** deploy
     * **host:** libvirt8
     * **deploy_tag:** curatend-with-vanilla-data
