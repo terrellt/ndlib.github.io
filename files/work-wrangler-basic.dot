@@ -1,0 +1,10 @@
+digraph "G" {
+    label="Work Wrangler - Basic"
+    compound=true;
+    node[color="grey15" shape=record penwidth=1 margin="0.15, 0.125"];
+
+    pid [shape=ellipse label="Request PID"]
+    work_wrangler [shape=box3d label="Work Wrangler"]
+    work_value_object [label="{ Work (Value Object) | #fieldsets | #properties | #attributes }"]
+    pid -> work_wrangler -> work_value_object
+}
