@@ -31,12 +31,12 @@ authors:
 #   twitter:        twitter_username_without_@
 #   url:            http://url-to-representation-of-person.com
   - id:             danhorst
-    google_plus_id: 112599365298738218884
+    google_plus_id: '112599365298738218884'
     name:           Dan Brubaker Horst
     twitter:        danhorst
     url:            http://dan.brubakerhorst.com/
   - id:             jeremyf
-    google_plus_id: 112258979021033246325
+    google_plus_id: '112258979021033246325'
     name:           Jeremy Friesen
     twitter:        jeremyfriesen
     url:            http://takeonrules.com/
