@@ -52,6 +52,18 @@ To do this I first make sure my repository is up to date:
     $ git checkout development-service-object
     $ git rebase master
 
+Rebasing my branch on master takes my commits and replays each one at the end of the current master branch.  Because the context of the commits has changed, I may get merge conflicts that have to be resolved before each commit gets applied.  Typically this involves editing the conflicting files, marking the conflict resolved with `git add`, and then continuing the rebase with `git rebase --continue`.
+
+Particularly for small commits, you may find that all of your changes get overwritten.  This will typically show up as a merge conflict where you keep all of the HEAD version, e.g.:
+
+    <<<<<<< HEAD
+    5.0
+    =======
+    4.7
+    >>>>>>> development-service-object
+
+You may see the error message "No changes - did you forget to use 'git add'?".  In cases like this, I can safely leave the commit out with `git rebase --skip`.
+
 I'll make sure the tests pass, then run the following command: `git rebase --interactive HEAD~4` (4 because I have four commits for this pull request)
 
 And get the following interactive menu:
