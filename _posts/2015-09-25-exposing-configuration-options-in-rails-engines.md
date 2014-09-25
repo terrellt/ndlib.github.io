@@ -5,7 +5,7 @@ filename: 2015-09-25-exposing-configuration-options-in-rails-engines.md
 layout:   post
 tagline:  Because Configuration May Need to Stomp on Convention
 title:    Exposing Configuration Options in Rails Engines
-tags:     rails, testing
+tags:     rails, configuration
 ---
 
 A common pattern for Rails Engines is to expose a `configure` method.
