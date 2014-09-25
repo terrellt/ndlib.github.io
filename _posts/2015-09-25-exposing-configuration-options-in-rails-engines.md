@@ -52,6 +52,7 @@ This works but I'm leaving out an important piece, what should `:configurable_se
 While working on [several](http://github.com/ndlib/hydramata-core) [Rails](http://github.com/ndlib/hydramata-works) [engines](http://github.com/projecthydra-labs/orcid), I have refined my configuration techniques.
 
 ## Communicate Expectations for Configuration
+<a name="communicate-expectations-for-configuration" />
 
 ```
 module MyEngine
@@ -83,6 +84,7 @@ This helps clarify and enforce expectations.
 A few tests can help provide specific guidance as well.
 
 ## Capture Configuration for Later
+<a name="capture-configuration-for-later" />
 
 In some cases, I have encountered timing issues related to the Rails initializer sequence.
 The typical problem is Rails raising a `NameError` or `LoadError` exception.
@@ -131,6 +133,7 @@ end
 The configuration block is captured as part of the initializer sequences, but is called just before the :after_initialize callback.
 
 ## Expose Configuration for Extension
+<a name="expose-configuration-for-extension" />
 
 Again, working on a suite of gems that are interrelated, I have found that I want a common configuration point.
 
