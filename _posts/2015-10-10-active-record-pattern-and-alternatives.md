@@ -34,7 +34,9 @@ If you have spent much time in the Rails ecosystem, the DataMapper pattern may l
 ## Breaking Down the ActiveRecord Pattern
 
 > Rails applications are maturing, and a lot of developers are starting to realize that these patterns may not scale so well to more and more complex applications.
+>
 > When figuring out how to move forward, we could do much worse than to consult the same book that laid the blueprints for Rails’ architecture, [Patterns of Enterprise Application Architecture](http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420)
+>
 > -- [Avdi Grim's "Fowler on Rails"](http://devblog.avdi.org/2011/07/27/fowler-on-rails/)
 
 Please take time to note the methods in both my diagram and Martin Fowler's diagram.
@@ -57,8 +59,7 @@ Perhaps it is the scope of the example, but I'm going to defer to Rober Martin:
 
 > Active Records are special forms of DTOs [Data Transfer Objects]. They are data structures with public variables; but they typically have navigational methods like *save* and *find*. Typically these Active Records are direct translations from database tables, or other data sources.
 >
-> Unfortunately we often find that developers try to treat these data structures as though they were objects by putting business rule methods in them.
-> This is awkward because it creates a hybrid data structure and an object.
+> Unfortunately we often find that developers try to treat these data structures as though they were objects by putting business rule methods in them. This is awkward because it creates a hybrid data structure and an object.
 >
 > The solution, of course, is to treat the Active Record as a data structure and to create separate objects that contain the business rules and that hide their internal data (which are probably just instance of the Active Record).
 >
