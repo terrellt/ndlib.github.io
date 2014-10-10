@@ -4,7 +4,7 @@ category: practices
 filename: 2015-10-06-active-record-pattern-and-alternatives.md
 layout:   post
 tagline:  Coherent Development (Part 4)
-title:    ActiveRecord Pattern and Alternative
+title:    ActiveRecord Pattern and Alternatives
 tags:     rails, design, projecthydra, coherent-development
 ---
 
