@@ -4,7 +4,7 @@ category: practices
 filename: 2015-10-21-composing-a-rails-plugin-for-hydra.md
 layout:   post
 tagline:  An Engine without the Antics
-title:    Composing a Rails Plugin for Hydra
+title:    Composing a Rails Plugin (for Hydra)
 tags:     rails, design, projecthydra, coherent-development
 ---
 
