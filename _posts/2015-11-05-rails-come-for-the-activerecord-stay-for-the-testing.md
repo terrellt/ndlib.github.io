@@ -4,7 +4,7 @@ category: practices
 filename: 2015-11-05-rails-come-for-the-activerecord-stay-for-the-testing.md
 layout:   post
 tagline:  Coherent Development (Part 5)
-title:    Rails: Come for the ActiveRecord, Stay for the Testing
+title:    "Rails: Come for the ActiveRecord, Stay for the Testing"
 tags:     rails, design, projecthydra, coherent-development
 ---
 
