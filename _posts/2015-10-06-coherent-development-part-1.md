@@ -30,11 +30,11 @@ Topics that I'm going to explore are:
 1. [Never Unprepared for Collaboration](/practices/never-unprepared-for-collaboration)
 1. [ActiveRecord Pattern and Alternatives](/practices/active-record-pattern-and-alternatives)
 1. [Rails: Come for the Active Record, Stay for the Testing](/practices/rails-come-for-the-activerecord-stay-for-the-testing)
-1. [Test Driven Development](/practices/test-driven-development)
+1. [Test Driven Development](/practices/my-developoing-philosophy-of-test-driven-development)
+1. Fast Tests
 1. S.O.L.I.D. Design Principles
 1. Command / Query Separation
 1. Controller Action's as Objects
-1. Fast Tests
 1. Composition over Inheritance
 
 I don't have comments enabled for this blog, but I want this to be an ongoing conversation.

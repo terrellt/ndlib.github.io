@@ -1,10 +1,10 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-11-07-test-driven-development.md
+filename: 2015-11-14-my-developoing-philosophy-of-test-driven-development.md
 layout:   post
-tagline:  Its All About Software Cartography
-title:    Test Driven Development
+tagline:  Coherent Development (Part 6)
+title:    My Developing Philosophy of Test Driven Development
 tags:     rails, design, projecthydra, coherent-development
 ---
 
