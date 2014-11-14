@@ -8,6 +8,8 @@ title:    ActiveRecord Pattern and Alternatives
 tags:     rails, design, projecthydra, coherent-development
 ---
 
+*Part of an ongoing series for [Coherent Development](/practices/coherent-development-part-1/)*
+
 Two patterns for [Object Relational Mapping](http://en.wikipedia.org/wiki/Object-relational_mapping) that I'm familiar with are:
 
 * ActiveRecord
