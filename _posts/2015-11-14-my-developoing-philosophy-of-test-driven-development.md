@@ -19,7 +19,7 @@ Then mapping that object to a persistence layer.
 
 In other words: *Input* to *Process* to *Output*.
 
-Consider what it means to be a software developer.
+## Consider what it means to be a software developer.
 
 As a developer, my job is to implement solutions to problems.
 In an ideal world, I will contribute to exploring the problem and collaborating on describing the proposed solution.
