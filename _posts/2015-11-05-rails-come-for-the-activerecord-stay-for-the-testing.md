@@ -8,6 +8,8 @@ title:    "Rails: Come for the ActiveRecord, Stay for the Testing"
 tags:     rails, design, projecthydra, coherent-development
 ---
 
+*Part of an ongoing series for [Coherent Development](/practices/coherent-development-part-1/)*
+
 I adopted Ruby on Rails in late 2005.
 It was one week after the [Snakes and Rubies seminar](https://www.youtube.com/watch?v=cb9KDt9aXc8) at DePaul University in Chicago.
 

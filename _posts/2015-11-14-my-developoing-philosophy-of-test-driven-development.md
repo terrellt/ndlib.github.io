@@ -8,6 +8,8 @@ title:    My Developing Philosophy of Test Driven Development
 tags:     rails, design, projecthydra, coherent-development
 ---
 
+*Part of an ongoing series for [Coherent Development](/practices/coherent-development-part-1/)*
+
 Software development at its core is about writing maps.
 Mapping one representation to another.
 

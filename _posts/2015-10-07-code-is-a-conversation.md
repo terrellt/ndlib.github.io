@@ -8,6 +8,8 @@ title:    Code is a Conversation
 tags:     rails, design, projecthydra, coherent-development
 ---
 
+*Part of an ongoing series for [Coherent Development](/practices/coherent-development-part-1/)*
+
 As a software developer, it is my responsibility to take imperfect requirements
 and translate them into a set of instructions for a computer to perfectly execute.
 

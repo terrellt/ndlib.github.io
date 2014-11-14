@@ -8,6 +8,8 @@ title:    Never Unprepared for Collaboration
 tags:     rails, design, projecthydra, coherent-development
 ---
 
+*Part of an ongoing series for [Coherent Development](/practices/coherent-development-part-1/)*
+
 > Take something complicated, break it up in to manageable parts, and then tackle them over time in order to achieve a goal. -- *[Phil Vecchione](https://plus.google.com/+PhilVecchione/posts)*
 
 I am an avid player and facilitator of table top role-playing games.
