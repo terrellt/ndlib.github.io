@@ -20,7 +20,7 @@ In other words: *Input* to *Process* to *Output*.
 Consider what it means to be a software developer.
 
 As a developer, my job is to implement solutions to problems.
-In an ideal world, I will contribute to exploring the problem and collaborating on the describing the proposed solution.
+In an ideal world, I will contribute to exploring the problem and collaborating on describing the proposed solution.
 
 In this case the:
 
@@ -31,7 +31,7 @@ In this case the:
 Again mapping.
 
 At a certain point in software development, an idea must be made executable.
-We are taking a proposed solution (e.g. the idea) as *Input*, mapping it to the *Output* production code (e.g. the executable).
+Take a proposed solution (e.g. the idea) as *Input*, map it to the *Output* production code (e.g. the executable).
 But what is the process?
 
 Mashing on the keyboard is an answer but it is inadequate.
@@ -40,7 +40,7 @@ Mashing on the keyboard is an answer but it is inadequate.
 
 When writing the map from one abstraction to another, I have found it important to think about:
 
-* Validations - how will we verify that each input component is correct
+* Validations - how will I verify that each input component is correct
 * Coercions - how will each input component be coerced into the output component
 * Expressiveness - how will I make sure what is happening is as clear as possible
 
@@ -54,13 +54,23 @@ My conjecture is that the *Process* should be writing automated tests.
 
 ### Acceptance Tests
 
+> We will define acceptance tests as tests written by a collaboration of the stakeholders and the programmers in order to define when a requirement is done.
+>
+> ...
+>
+> Acceptance tests should always be automated.
+> There is a place for manual testing elsewhere in the software lifecycle, but these kinds of tests should never be manual.
+> The reason is simple: cost.
+>
+> *The Clean Coder: A Code of Conduct for Professional Programmers* by Robert C. Martin
+
 **Acceptance tests verify that what you are doing is right.**
 
 This is where you **validate** that you are processing the proposed solution.
 It is where you **express**, to the best of your ability, what is happening in the solution.
 It is where you **coerce** the ideas of "as a user" and "with a valid form input" into objects in the system.
 
-These are tests that should be readable by end-users.
+The goal is to agree on how to verify that your solution is done.
 
 ### Unit Tests
 
@@ -69,6 +79,8 @@ These are tests that should be readable by end-users.
 This is where you **validate** the internal processes of your solution.
 This is where you **express** the pieces and parts that make up the solution.
 This is where you **coerce** small inputs into small outputs.
+
+Unit tests should be readable by developers and be treated as low-level API documentation.
 
 ### Functional Tests
 
