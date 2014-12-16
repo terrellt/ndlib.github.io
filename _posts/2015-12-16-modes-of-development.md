@@ -55,7 +55,7 @@ Before I can get to Red I need to know what I am trying to solve.
 A proposed solution is a response to an observation.
 The proposed solution is a hypothetical solution to a real world problem.
 
-Once I have a proposed solution, I forumalate how I will verify my solution.
+Once I have a proposed solution, I forumlate how I will verify my solution.
 Then I analyze the results of the tests and the solution.
 
 This cleaves close to the [scientific method](http://en.wikipedia.org/wiki/Scientific_method)
@@ -73,7 +73,7 @@ There have been too many times where I've been in a Refactor mode and drifted to
 
 What ends up happening is I end up with a very dirty working directory.
 I have lots of changes and layers of abstraction that are comingled.
-I end up spending a bit of time using git's interative shell to pick apart the larger ideas.
+I end up spending a bit of time using git's interactive shell to pick apart the larger ideas.
 
 ## Never Unprepared
 
@@ -137,7 +137,7 @@ What follows is an inventory of the modes of thinking in which I find myself.
 ### Refining How a Test Reads
 
 * **Goal:** Create a document that can be used as a reference point into the system
-* **Method:** Write the tests for clarity and expressiveness. Convey meaning and how things are assembled. In my experience this focusing on legible and digestable tests is stronger than any README documentation.
+* **Method:** Write the tests for clarity and expressiveness. Convey meaning and how things are assembled. In my experience this focusing on legible and digestible tests is stronger than any README documentation.
 * **Caveat:** Documentation lies. Consider documentation that can assert it is correct. That documentation is an automated test.
 
 ### Documentation
