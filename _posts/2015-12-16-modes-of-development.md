@@ -10,7 +10,7 @@ tags:     rails, design, projecthydra, coherent-development
 
 *Part of an ongoing series for [Coherent Development](/practices/coherent-development-part-1/)*
 
-*This was extracted from a free eBook that I wrote(https://github.com/jeremyf/take-on-development)*
+*This was extracted from a free eBook that I wrote ["Developing in the Open"](https://github.com/jeremyf/take-on-development)*
 
 # Modes of Development
 
