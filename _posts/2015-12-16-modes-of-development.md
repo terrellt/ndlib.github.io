@@ -12,8 +12,6 @@ tags:     rails, design, projecthydra, coherent-development
 
 *This was extracted from a free eBook that I wrote ["Developing in the Open"](https://github.com/jeremyf/take-on-development)*
 
-# Modes of Development
-
 For me, software development is a juggling act.
 I jump from deep concentration to guiding another developer to answering an unrelated work email over to a chat with a remote developer then off to a meeting.
 
