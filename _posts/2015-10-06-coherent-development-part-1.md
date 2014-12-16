@@ -31,6 +31,7 @@ Topics that I'm going to explore are:
 1. [ActiveRecord Pattern and Alternatives](/practices/active-record-pattern-and-alternatives)
 1. [Rails: Come for the Active Record, Stay for the Testing](/practices/rails-come-for-the-activerecord-stay-for-the-testing)
 1. [Test Driven Development](/practices/my-developoing-philosophy-of-test-driven-development)
+1. [Modes of Development](/practices/modes-of-development)
 1. Fast Tests
 1. S.O.L.I.D. Design Principles
 1. Command / Query Separation
