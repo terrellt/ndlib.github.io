@@ -14,8 +14,9 @@ tags:     rails, design, projecthydra, testing, coherent-development
 
 In a recent conversation with [Dan](http://dan.brubakerhorst.com/), my coworker and supervisor, I asked for his impression of me as a team member and developer. His response was something along the lines of:
 
-> Jeremy, I have told others that you are our canary in a coalmine.
-> That is to say that you are aware of problems, and experience the pain of those problems, well before many other people.
+> Jeremy, You are very attuned to sources of mental friction.
+> In that sense you act like a canary in a coal mine for our team.
+> You start grappling with difficult problems before the rest of us realize they exist.
 
 A fair summary. I often don the chicken suit and proclaim the sky is failing.
 I try to temper that, but its hard. I recognize and intuit patterns as abstractions come screaming at me.
