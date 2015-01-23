@@ -105,17 +105,19 @@ I needed to click on a link for a TODO item; The link had a generic text and the
 
 Here is a snippet from a Work page's HTML. I wrote it quickly as I want to demonstrate to Dan how the TODO list was generated. This code represents shifting a hard-coded action list to a dynamic action list.
 
-```ruby
-<ul>
-  <%- model.actions.each do |action| -%>
-    <li class="required-<%= action.name %>">
-      <span><%= action.status %></span>
-      <span><%= action.label %></span>
-      <%= link_to 'Do it!', action.path %>
-    </li>
-  <%- end -%>
-</ul>
-```
+<pre>
+  <code lang="rails">
+&lt;ul&gt;
+  &lt;%- model.actions.each do |action| -%&gt;
+    &lt;li class="required-&lt;%= action.name %&gt;"&gt;
+      &lt;span&gt;&lt;%= action.status %&gt;&lt;/span&gt;
+      &lt;span&gt;&lt;%= action.label %&gt;&lt;/span&gt;
+      &lt;%= link_to 'Do it!', action.path %&gt;
+    &lt;/li&gt;
+  &lt;%- end -%&gt;
+&lt;/ul&gt;
+  </code>
+</pre>
 
 I had a test, with a PageObject that already tested clicking on the hard-coded version.
 
