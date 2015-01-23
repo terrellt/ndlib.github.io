@@ -21,13 +21,13 @@
     <meta name="description" content="{{ page.content| markdownify | strip_html | truncatewords:50 }}">
     <meta name="twitter:description" content="{{ page.content| markdownify | strip_html | truncatewords:50 }}">
 {% endif %}
-    <meta name="twitter:url" content="http://{{ site.host }}{{ page.url }}">
+    <meta name="twitter:url" content="http://{{ site.hostname }}{{ page.url }}">
 {% if page.reblog %}
     <link rel="canonical" href="{{ page.reblog }}" />
 {% else %}
-    <link rel="canonical" href="http://{{ site.host }}{{ page.url }}" />
+    <link rel="canonical" href="http://{{ site.hostname }}{{ page.url }}" />
 {% endif %}
-    <link rel="alternate" href="http://{{ site.host }}/feed" title="ATOM Feed" type="application/atom+xml" />
+    <link rel="alternate" href="http://{{ site.hostname }}/feed" title="ATOM Feed" type="application/atom+xml" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/site.css" />
 
@@ -42,7 +42,7 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create','{{ site.analytics_token }}','{{ site.host }}');ga('send','pageview');
+      ga('create','{{ site.analytics_token }}','{{ site.hostname }}');ga('send','pageview');
     </script>
 
   </body>
