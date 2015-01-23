@@ -5,7 +5,7 @@ markdown: rdiscount
 rdiscount:
   extensions: [smart]
 
-pygments:  true
+highlighter: pygments
 permalink: /:categories/:title/
 
 exclude:
@@ -19,7 +19,7 @@ sorted_categories:
   - planning
   - procedures
 
-host: ndlib.github.io
+hostname: ndlib.github.io
 description: Notre Dame Hesburgh Libraries developer blog
 url: http://ndlib.github.io
 name: Hesburgh Libraries @ github
@@ -40,3 +40,4 @@ authors:
     name:           Jeremy Friesen
     twitter:        jeremyfriesen
     url:            http://takeonrules.com/
+
