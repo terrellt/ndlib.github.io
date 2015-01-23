@@ -3,7 +3,7 @@ author:   jeremyf
 category: practices
 filename: 2015-01-23-pay-attention-to-pain-points.md
 layout:   post
-tagline:  Coherent Development (Part 7) / View Testing
+tagline:  Coherent Development (Part 8) / View Testing
 title:    Pay Attention to Pain Points
 tags:     rails, design, projecthydra, testing, coherent-development
 ---
