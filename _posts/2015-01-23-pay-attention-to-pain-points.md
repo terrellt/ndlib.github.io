@@ -12,7 +12,7 @@ tags:     rails, design, projecthydra, testing, coherent-development
 
 ## Some Background
 
-In a recent conversation with [Dan](http://dan.brubakerhorst.com/), my coworker and supervisor, I asked for his impression of me as a team member and developer. His response was something along the lines of:
+In a recent conversation with [Dan](http://dan.brubakerhorst.com/), my coworker and supervisor, I asked for his impression of me as a team member and developer. He said:
 
 > Jeremy, You are very attuned to sources of mental friction.
 > In that sense you act like a canary in a coal mine for our team.
