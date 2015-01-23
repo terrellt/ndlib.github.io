@@ -14,9 +14,10 @@ tags:     rails, design, projecthydra, testing, coherent-development
 
 In a recent conversation with [Dan](http://dan.brubakerhorst.com/), my coworker and supervisor, I asked for his impression of me as a team member and developer. He said:
 
-> Jeremy, You are very attuned to sources of mental friction.
+> Jeremy, You are very attuned to sources of mental friction;
+> you feel it more acutely than the rest of us.
 > In that sense you act like a canary in a coal mine for our team.
-> You start grappling with difficult problems before the rest of us realize they exist.
+> You start grappling with difficult problems before we realize they exist.
 
 A fair summary. I often don the chicken suit and proclaim the sky is failing.
 I try to temper that, but its hard. I recognize and intuit patterns as abstractions come screaming at me.
