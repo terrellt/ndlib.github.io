@@ -105,7 +105,7 @@ I needed to click on a link for a TODO item; The link had a generic text and the
 
 Here is a snippet from a Work page's HTML. I wrote it quickly as I want to demonstrate to Dan how the TODO list was generated. This code represents shifting a hard-coded action list to a dynamic action list.
 
-```ruby
+```html
 <ul>
   <%- model.actions.each do |action| -%>
     <li class="required-<%= action.name %>">
@@ -114,7 +114,7 @@ Here is a snippet from a Work page's HTML. I wrote it quickly as I want to demon
       <%= link_to 'Do it!', action.path %>
     </li>
   <%- end -%>
-<ul>
+</ul>
 ```
 
 I had a test, with a PageObject that already tested clicking on the hard-coded version.
@@ -188,7 +188,7 @@ That someone who is used to interacting with a web page might be able to read th
 
 Now review the [snippet extracted from the Sipity view code](https://github.com/ndlib/sipity/blob/eb0f8c958aa2d8e2f2107ffe60f437f15890a47f/app/views/sipity/controllers/works/show.html.erb#L47-L52)
 
-```ruby
+```html
 <ul>
   <%- actions.each do |action| -%>
     <li itemscope itemtype="http://schema.org/Action">
