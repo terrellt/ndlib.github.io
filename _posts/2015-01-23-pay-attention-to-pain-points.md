@@ -107,13 +107,13 @@ Here is a snippet from a Work page's HTML. I wrote it quickly as I want to demon
 
 ```rails
 <ul>
-  <%- model.actions.each do |action| -%>
-    <li class="required-<%= action.name %>">
-      <span><%= action.status %></span>
-      <span><%= action.label %></span>
-      <%= link_to 'Do it!', action.path %>
+  &lt;%- model.actions.each do |action| -%&gt;
+    <li class="required-&lt;%= action.name %&gt;">
+      <span>&lt;%= action.status %&gt;</span>
+      <span>&lt;%= action.label %&gt;</span>
+      &lt;%= link_to 'Do it!', action.path %&gt;
     </li>
-  <%- end -%>
+  &lt;%- end -%&gt;
 <ul>
 ```
 
@@ -190,14 +190,14 @@ Now review the [snippet extracted from the Sipity view code](https://github.com/
 
 ```rails
 <ul>
-  <%- actions.each do |action| -%>
+  &lt;%- actions.each do |action| -%&gt;
     <li itemscope itemtype="http://schema.org/Action">
-      <meta itemprop="name" content="todo><%= set %>><%= action.name %>">
-      <span itemprop="actionStatus"><%= action.state %></span>
-      <span itemprop="description"><%= action.label %></span>
-      <a itemprop="url" href="<%= action.path %>">Do it!</a>
+      <meta itemprop="name" content="todo&gt;&lt;%= set %&gt;&gt;&lt;%= action.name %&gt;">
+      <span itemprop="actionStatus">&lt;%= action.state %&gt;</span>
+      <span itemprop="description">&lt;%= action.label %&gt;</span>
+      <a itemprop="url" href="&lt;%= action.path %&gt;">Do it!</a>
     </li>
-  <%- end -%>
+  &lt;%- end -%&gt;
 </ul>
 ```
 
