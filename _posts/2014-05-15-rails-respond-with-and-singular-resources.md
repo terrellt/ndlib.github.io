@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-05-15-rails-respond-with-and-singular-resources.md
+filename: 2014-05-15-rails-respond-with-and-singular-resources.md
 layout:   post
 tagline:  Surprise! Let me format that for you.
 title:    Rails respond_with and Singular Resources

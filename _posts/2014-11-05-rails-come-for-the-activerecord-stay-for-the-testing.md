@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-11-05-rails-come-for-the-activerecord-stay-for-the-testing.md
+filename: 2014-11-05-rails-come-for-the-activerecord-stay-for-the-testing.md
 layout:   post
 tagline:  Coherent Development (Part 5)
 title:    "Rails: Come for the ActiveRecord, Stay for the Testing"

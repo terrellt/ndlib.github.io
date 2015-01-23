@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-12-16-modes-of-development.md
+filename: 2014-12-16-modes-of-development.md
 layout:   post
 tagline:  Coherent Development (Part 7)
 title:    Modes of Development

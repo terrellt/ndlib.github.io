@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-10-09-never-unprepared-for-collaboration.md
+filename: 2014-10-09-never-unprepared-for-collaboration.md
 layout:   post
 tagline:  Coherent Development (Part 3)
 title:    Never Unprepared for Collaboration

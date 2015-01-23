@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-05-06-spitballing-a-design.md
+filename: 2014-05-06-spitballing-a-design.md
 layout:   post
 tagline:  Modeling data that will change over time
 title:    Spitballing a Design

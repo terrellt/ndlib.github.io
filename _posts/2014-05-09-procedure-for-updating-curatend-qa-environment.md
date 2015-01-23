@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: procedures
-filename: 2015-05-09-procedure-for-updating-curatend-qa-environment.md
+filename: 2014-05-09-procedure-for-updating-curatend-qa-environment.md
 layout:   post
 tagline:  Applicable for 2014-Q2 CurateND Release
 title:    Procedure for updating CurateND QA Environment

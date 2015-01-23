@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-10-06-coherent-development-part-1.md
+filename: 2014-10-06-coherent-development-part-1.md
 layout:   post
 tagline:  We Are Having a Conversation
 title:    Coherent Development (Part 1)

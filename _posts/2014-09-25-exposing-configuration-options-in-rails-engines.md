@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-09-25-exposing-configuration-options-in-rails-engines.md
+filename: 2014-09-25-exposing-configuration-options-in-rails-engines.md
 layout:   post
 tagline:  Because Configuration May Need to Stomp on Convention
 title:    Exposing Configuration Options in Rails Engines

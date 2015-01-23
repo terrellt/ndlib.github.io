@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-05-09-leveraging-git-in-iterating-towards-a-release.md
+filename: 2014-05-09-leveraging-git-in-iterating-towards-a-release.md
 layout:   post
 tagline:  Its all about atomic commits and branches
 title:    Leveraging Git in Iterating Towards a Release
