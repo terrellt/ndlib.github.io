@@ -33,6 +33,7 @@ Topics that I'm going to explore are:
 1. [Test Driven Development](/practices/my-developoing-philosophy-of-test-driven-development)
 1. [Modes of Development](/practices/modes-of-development)
 1. [Pay Attention to Pain Points](/practices/pay-attention-to-pain-points)
+1. [Leveraging Instance Variables in Ruby Classes](/practices/ruby-class-instantiation-introduction)
 1. Fast Tests
 1. S.O.L.I.D. Design Principles
 1. Command / Query Separation
