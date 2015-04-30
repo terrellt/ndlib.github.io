@@ -93,3 +93,7 @@ Get comfortable with a test framework; **Practice using a test framework** as yo
 Spend some time working on **Project Euler challenges** and **Code Wars**; See how others are solving problems.
 
 **Fall in love with your code editor**; Learn its ins and outs: shortcuts, macros, snippets, refactoring options, CTags, etc. Spend time sharpening your coding tools.
+
+**Leverage the command line** Text is the language of all code, your terminal is powerful. Use it.
+
+For further information see [my draft ebook](https://github.com/jeremyf/take-on-development).
