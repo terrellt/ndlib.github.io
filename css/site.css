@@ -67,3 +67,5 @@ html {
 .pull-right {
 	float: right;
 }
+
+blockquote p { margin-bottom: 10px; }
