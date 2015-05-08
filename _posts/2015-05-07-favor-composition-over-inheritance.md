@@ -248,7 +248,7 @@ It draws attention to the exact methods you are using.
 
 Now lets say that we want a formatted abstract with title?
 
-## Composition Class
+## Updating Composition Class
 
 In the case of the composition class method, there are a few adjustments but they
 again remain explicit.
@@ -278,7 +278,7 @@ module Compositions
 end
 ```
 
-## Mixin Module
+## Updating Mixin Module
 
 ```ruby
 module WithAbstract
@@ -306,7 +306,7 @@ On the upside I only need to re-open one class.
 But that is a small thing compared to the obfuscated dangers.
 I hope you can agree with me when I say: Yuck!
 
-## Inheritance
+## Updating Inheritance
 
 This example is trivial and offers the least invasive changes.
 But does someone now realize that their `ConferencePresentation` has a `#title_and_abstract_for_presentation` method?
