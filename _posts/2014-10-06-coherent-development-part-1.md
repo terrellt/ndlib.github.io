@@ -38,7 +38,7 @@ Topics that I'm going to explore are:
 1. S.O.L.I.D. Design Principles
 1. Command / Query Separation
 1. Controller Action's as Objects
-1. Composition over Inheritance
+1. [Composition over Inheritance](/practices/favor-composition-over-inheritance)
 
 I don't have comments enabled for this blog, but I want this to be an ongoing conversation.
 So if you want to engage with me consider:

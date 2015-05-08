@@ -1,7 +1,7 @@
 ---
 author:   jeremyf
 category: practices
-filename: 2015-04-20-favor-composition-over-inheritence.md
+filename: 2015-05-07-favor-composition-over-inheritance.md
 layout:   post
 tagline:  And Avoid ActiveSupport::Concern as Its Encourages a Leaky Ship
 title:    Favor Composition over Inheritence
@@ -25,9 +25,10 @@ Erich Gamma's response:
 >
 > ["Design Principles from Design Patterns: A Conversation with Erich Gamma, Part III" - Bill Venners & Erich Gamma](http://www.artima.com/lejava/articles/designprinciples4.html)
 
-There are lots of blog posts about favoring object composition over class inheritence, but I want to go into how to do it in Ruby on Rails.
+There are lots of blog posts about favoring object composition over class inheritance, but I want to go into a few ways to do it in Ruby on Rails.
 
-The example that I'm using is sanitized from a real-worlde example.
+The example that I'm building is inspired from a [real-world instance](https://github.com/ndlib/sipity/commit/3cce37579df96b4ae3f783605f1ba1d191013cc7#diff-3d600fac39c68ac9be0e872b98c2cb82).
+
 It highlights the many moving parts.
 
 ```ruby
@@ -71,6 +72,8 @@ Options available to us:
 * Extract a CreativeWork abstract class (or [Wortem](https://github.com/projecthydra-labs/hydra-works/issues/8))
 * Extract a module to Mixin the appropriate behavior
 * Extract a collaborating class concerning abstracts then compose it back in
+
+Humor me, as this example is trivial. But just remember how long does code stay trivial?
 
 ## CreativeWork as an Abstract Class
 
@@ -182,54 +185,143 @@ end
 
 While we have encapsulated the dependencies of the `WithAbstract`, there is a confusing interaction with the initialize method.
 
-## Composition Module
+## Composition Class
 
 ```ruby
-```
+module Compositions
+  class AbstractComposition
+    def new(base)
+      self.base = base
+    end
 
-**Incomplete**
--------------------------------------------------------------
+    attr_accessor :abstract
 
+    def abstract_to_html
+      ConvertToHtml.call(abstract)
+    end
+
+    private
+
+    attr_accessor :base
+  end
+end
 
 class ResearchPaper
-
-```ruby
-class RequestChangeOnBehalfOf
-  include ActiveModel::Validations
-
-  def initialize(comment:, on_behalf_of_collaborator_id:, submitted_by:, repository: default_repository)
-    self.comment = comment
-    self.on_behalf_of_collaborator_id = on_behalf_of_collaborator_id
-    self.submitted_by = submitted_by
-    self.repository = repository
+  def initialize(title:, abstract:)
+    self.title = title
+    self.abstract_extension = Compositions::AbstractComposition.new(self)
+    self.abstract = abstract
   end
 
-  validates :on_behalf_of_collaborator_id, presence: true, inclusion: { in: :valid_on_behalf_of_collaborator_ids }
-
-  def on_behalf_of_collaborator
-    repository.get_collaborator_for(id: on_behalf_of_collaborator_id)
-  end
-
-  def available_on_behalf_of_collaborators
-    repository.available_on_behalf_of_collaborators(user: submitted_by)
-  end
-
-  def submit
-    repository.write_comment_for(form: self)
-  end
+  delegate :abstract, :abstract=, :abstract_to_html, to: :abstract_extension
+  attr_accessor :title, :presenter
 
   private
 
-  attr_accessor :comment, :on_behalf_of_collaborator_id, :submitted_by, :repository
+  attr_accessor :abstract_extension
+end
 
-  def valid_on_behalf_of_collaborator_ids
-    repository.get_all_valid_collaborators_ids_for(user: submitted_by)
+class ConferencePresentation
+  def initialize(title:, presenter:, abstract:)
+    self.title = title
+    self.presenter = presenter
+    self.abstract_extension = Compositions::AbstractComposition.new(self)
+    self.abstract = abstract
   end
 
-  def default_repository
-    CommandRepository.new
+  delegate :abstract, :abstract=, :abstract_to_html, to: :abstract_extension
+  attr_accessor :title, :presenter
+
+  private
+
+  attr_accessor :abstract_extension
+end
+```
+
+This is my current preferred method for a few reasons:
+
+* The dependencies are explicit
+* I can test the Compositions::AbstractComposition in true isolation
+
+Yes, it is extra lines of code, but it does not hide the dependencies.
+It draws attention to the exact methods you are using.
+
+Now lets say that we want a formatted abstract with title?
+
+## Composition Class
+
+In the case of the composition class method, there are a few adjustments but they
+again remain explicit.
+
+```ruby
+# reopening from Composition class example
+class ResearchPaper
+  delegate :title_and_abstract_for_presentation, to: :abstract_extension
+end
+
+class ConferencePresentation
+  delegate :title_and_abstract_for_presentation, to: :abstract_extension
+end
+
+module Compositions
+  class AbstractComposition
+    def title_and_abstract_for_presentation
+      ConvertToHtml.call("<h1>#{base.title}</h1>\n#{abstract}")
+    end
+
+    # Guarding the API
+    def base=(a_base)
+      raise unless a_base.respond_to?(:title)
+      @base = title
+    end
   end
 end
 ```
 
-[This is the commit in which I chose to craft a small collaborating object](https://github.com/ndlib/sipity/commit/3cce37579df96b4ae3f783605f1ba1d191013cc7#diff-3d600fac39c68ac9be0e872b98c2cb82) instead of using the ubiqutious ActiveSupport::Concern kludge.
+## Mixin Module
+
+```ruby
+module WithAbstract
+  extend ActiveSupport::Concern
+  included do
+
+    # I suppose this can be a guard, but what about method_missing, respond_to_missing?
+    # But what if this is included before the other module that adds :title as method?
+    raise unless self.instance_methods.include?(:title)
+
+    def initialize(**keywords, :abstract)
+      super(**keywords)
+      self.abstract = abstract
+    end
+    attr_accessor :abstract
+  end
+  def title_and_abstract_for_presentation
+    # Where did the title method come from?
+    ConvertToHtml.call("<h1>#{title}</h1>\n#{abstract}")
+  end
+end
+```
+
+On the upside I only need to re-open one class.
+But that is a small thing compared to the obfuscated dangers.
+I hope you can agree with me when I say: Yuck!
+
+## Inheritance
+
+This example is trivial and offers the least invasive changes.
+But does someone now realize that their `ConferencePresentation` has a `#title_and_abstract_for_presentation` method?
+
+```ruby
+class CreativeWork
+  def title_and_abstract_for_presentation
+    # Where did the title method come from?
+    ConvertToHtml.call("<h1>#{title}</h1>\n#{abstract}")
+  end
+end
+```
+
+For a real world example:
+
+* [Crafting a small collaborating object](https://github.com/ndlib/sipity/commit/3cce37579df96b4ae3f783605f1ba1d191013cc7#diff-3d600fac39c68ac9be0e872b98c2cb82) instead of using the ubiquitous ActiveSupport::Concern kludge.
+
+Other examples are welcome.
